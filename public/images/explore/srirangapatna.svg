@@ -1,0 +1,78 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#E0F6FF"/>
+  
+  <!-- Sky -->
+  <rect x="0" y="0" width="400" height="150" fill="#87CEEB"/>
+  
+  <!-- River -->
+  <rect x="0" y="120" width="400" height="180" fill="#4682B4"/>
+  <rect x="0" y="130" width="400" height="170" fill="#5F9EA0"/>
+  <rect x="0" y="140" width="400" height="160" fill="#87CEEB"/>
+  
+  <!-- River ripples -->
+  <ellipse cx="100" cy="200" rx="30" ry="15" fill="#B0E0E6"/>
+  <ellipse cx="300" cy="220" rx="30" ry="15" fill="#B0E0E6"/>
+  <ellipse cx="200" cy="180" rx="30" ry="15" fill="#B0E0E6"/>
+  
+  <!-- Island -->
+  <ellipse cx="200" cy="160" rx="80" ry="40" fill="#90EE90"/>
+  <ellipse cx="200" cy="160" rx="70" ry="35" fill="#98FB98"/>
+  
+  <!-- Temple on island -->
+  <rect x="170" y="100" width="60" height="60" fill="#FFD700"/>
+  <rect x="175" y="105" width="50" height="50" fill="#FFA500"/>
+  <rect x="180" y="110" width="40" height="40" fill="#FFD700"/>
+  
+  <!-- Temple tower -->
+  <rect x="185" y="70" width="30" height="30" fill="#FFD700"/>
+  <rect x="190" y="75" width="20" height="20" fill="#FFA500"/>
+  <rect x="195" y="80" width="10" height="10" fill="#FFD700"/>
+  
+  <!-- Temple entrance -->
+  <rect x="190" y="140" width="20" height="20" fill="#8B4513"/>
+  <rect x="192" y="145" width="16" height="10" fill="#DEB887"/>
+  
+  <!-- Temple windows -->
+  <rect x="175" y="115" width="15" height="20" fill="#87CEEB"/>
+  <rect x="210" y="115" width="15" height="20" fill="#87CEEB"/>
+  
+  <!-- Island shore -->
+  <ellipse cx="200" cy="160" rx="90" ry="45" fill="#DEB887"/>
+  
+  <!-- Trees on island -->
+  <ellipse cx="150" cy="140" rx="15" ry="18" fill="#228B22"/>
+  <ellipse cx="150" cy="140" rx="12" ry="15" fill="#32CD32"/>
+  <rect x="147" y="150" width="6" height="20" fill="#8B4513"/>
+  
+  <ellipse cx="250" cy="140" rx="15" ry="18" fill="#228B22"/>
+  <ellipse cx="250" cy="140" rx="12" ry="15" fill="#32CD32"/>
+  <rect x="247" y="150" width="6" height="20" fill="#8B4513"/>
+  
+  <!-- Boats on river -->
+  <ellipse cx="80" cy="200" rx="20" ry="8" fill="#8B4513"/>
+  <ellipse cx="80" cy="200" rx="15" ry="6" fill="#A0522D"/>
+  <rect x="75" y="190" width="10" height="20" fill="#8B4513"/>
+  
+  <ellipse cx="320" cy="220" rx="20" ry="8" fill="#8B4513"/>
+  <ellipse cx="320" cy="220" rx="15" ry="6" fill="#A0522D"/>
+  <rect x="315" y="210" width="10" height="20" fill="#8B4513"/>
+  
+  <!-- Birds -->
+  <ellipse cx="100" cy="80" rx="5" ry="3" fill="#87CEEB"/>
+  <ellipse cx="300" cy="60" rx="5" ry="3" fill="#87CEEB"/>
+  <ellipse cx="200" cy="40" rx="5" ry="3" fill="#87CEEB"/>
+  
+  <!-- Sun -->
+  <circle cx="350" cy="40" r="20" fill="#FFD700"/>
+  <circle cx="350" cy="40" r="15" fill="#FFFF00"/>
+  
+  <!-- Clouds -->
+  <ellipse cx="80" cy="30" rx="15" ry="8" fill="white"/>
+  <ellipse cx="95" cy="30" rx="12" ry="6" fill="white"/>
+  <ellipse cx="110" cy="30" rx="15" ry="8" fill="white"/>
+  
+  <ellipse cx="280" cy="20" rx="18" ry="10" fill="white"/>
+  <ellipse cx="300" cy="20" rx="15" ry="8" fill="white"/>
+  <ellipse cx="320" cy="20" rx="18" ry="10" fill="white"/>
+</svg>

@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mysurutrip.com/sitemap
+
+# Disallow admin or private areas (if any exist in the future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all main content
+Allow: /hotels/
+Allow: /activities/
+Allow: /explore/
+Allow: /get-quote
+
+# Allow policy pages
+Allow: /privacy-policy
+Allow: /terms-of-service
+Allow: /cancellation-policy
+
+# Crawl delay (optional - be respectful to servers)
+Crawl-delay: 1

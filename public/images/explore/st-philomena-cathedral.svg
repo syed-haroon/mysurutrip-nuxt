@@ -1,0 +1,73 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F0F8FF"/>
+  
+  <!-- Sky -->
+  <rect x="0" y="0" width="400" height="150" fill="#87CEEB"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="150" width="400" height="150" fill="#90EE90"/>
+  
+  <!-- Main cathedral building -->
+  <rect x="120" y="80" width="160" height="100" fill="#F5F5DC"/>
+  <rect x="125" y="85" width="150" height="90" fill="#F0E68C"/>
+  <rect x="130" y="90" width="140" height="80" fill="#F5F5DC"/>
+  
+  <!-- Cathedral roof -->
+  <rect x="110" y="60" width="180" height="30" fill="#8B4513"/>
+  <rect x="115" y="65" width="170" height="20" fill="#A0522D"/>
+  
+  <!-- Central tower -->
+  <ellipse cx="200" cy="30" rx="25" ry="30" fill="#F5F5DC"/>
+  <ellipse cx="200" cy="30" rx="20" ry="25" fill="#F0E68C"/>
+  <ellipse cx="200" cy="30" rx="15" ry="20" fill="#F5F5DC"/>
+  
+  <!-- Side towers -->
+  <ellipse cx="140" cy="40" rx="20" ry="25" fill="#F5F5DC"/>
+  <ellipse cx="140" cy="40" rx="15" ry="20" fill="#F0E68C"/>
+  
+  <ellipse cx="260" cy="40" rx="20" ry="25" fill="#F5F5DC"/>
+  <ellipse cx="260" cy="40" rx="15" ry="20" fill="#F0E68C"/>
+  
+  <!-- Cathedral entrance -->
+  <rect x="175" y="160" width="50" height="20" fill="#8B4513"/>
+  <rect x="180" y="165" width="40" height="10" fill="#DEB887"/>
+  
+  <!-- Stained glass windows -->
+  <rect x="145" y="110" width="20" height="25" fill="#87CEEB"/>
+  <rect x="200" y="110" width="40" height="25" fill="#87CEEB"/>
+  <rect x="235" y="110" width="20" height="25" fill="#87CEEB"/>
+  
+  <!-- Cross on central tower -->
+  <rect x="198" y="15" width="4" height="20" fill="#8B4513"/>
+  <rect x="193" y="20" width="14" height="4" fill="#8B4513"/>
+  
+  <!-- Cathedral grounds -->
+  <ellipse cx="80" cy="220" rx="25" ry="18" fill="#FF69B4"/>
+  <ellipse cx="80" cy="220" rx="20" ry="15" fill="#FFB6C1"/>
+  
+  <ellipse cx="320" cy="220" rx="25" ry="18" fill="#32CD32"/>
+  <ellipse cx="320" cy="220" rx="20" ry="15" fill="#90EE90"/>
+  
+  <!-- Trees -->
+  <ellipse cx="60" cy="200" rx="18" ry="22" fill="#228B22"/>
+  <ellipse cx="60" cy="200" rx="13" ry="18" fill="#32CD32"/>
+  <rect x="57" y="210" width="6" height="25" fill="#8B4513"/>
+  
+  <ellipse cx="340" cy="200" rx="18" ry="22" fill="#228B22"/>
+  <ellipse cx="340" cy="200" rx="13" ry="18" fill="#32CD32"/>
+  <rect x="337" y="210" width="6" height="25" fill="#8B4513"/>
+  
+  <!-- Path to cathedral -->
+  <rect x="175" y="200" width="50" height="8" fill="#DEB887"/>
+  <rect x="170" y="210" width="60" height="8" fill="#DEB887"/>
+  
+  <!-- Sun -->
+  <circle cx="350" cy="40" r="20" fill="#FFD700"/>
+  <circle cx="350" cy="40" r="15" fill="#FFFF00"/>
+  
+  <!-- Birds -->
+  <ellipse cx="100" cy="80" rx="5" ry="3" fill="#87CEEB"/>
+  <ellipse cx="300" cy="60" rx="5" ry="3" fill="#87CEEB"/>
+  <ellipse cx="200" cy="40" rx="5" ry="3" fill="#87CEEB"/>
+</svg>

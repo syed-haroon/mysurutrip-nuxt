@@ -1,0 +1,96 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F0F8FF"/>
+  
+  <!-- Sky -->
+  <rect x="0" y="0" width="400" height="150" fill="#87CEEB"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="150" width="400" height="150" fill="#90EE90"/>
+  
+  <!-- Railway tracks -->
+  <rect x="0" y="200" width="400" height="8" fill="#8B4513"/>
+  <rect x="0" y="208" width="400" height="8" fill="#8B4513"/>
+  
+  <!-- Track ties -->
+  <rect x="50" y="195" width="8" height="20" fill="#8B4513"/>
+  <rect x="100" y="195" width="8" height="20" fill="#8B4513"/>
+  <rect x="150" y="195" width="8" height="20" fill="#8B4513"/>
+  <rect x="200" y="195" width="8" height="20" fill="#8B4513"/>
+  <rect x="250" y="195" width="8" height="20" fill="#8B4513"/>
+  <rect x="300" y="195" width="8" height="20" fill="#8B4513"/>
+  <rect x="350" y="195" width="8" height="20" fill="#8B4513"/>
+  
+  <!-- Steam locomotive -->
+  <rect x="100" y="140" width="80" height="50" fill="#2F4F4F"/>
+  <rect x="105" y="145" width="70" height="40" fill="#708090"/>
+  <rect x="110" y="150" width="60" height="30" fill="#2F4F4F"/>
+  
+  <!-- Locomotive chimney -->
+  <rect x="130" y="120" width="20" height="30" fill="#2F4F4F"/>
+  <rect x="135" y="125" width="10" height="20" fill="#708090"/>
+  
+  <!-- Locomotive wheels -->
+  <circle cx="120" cy="190" r="15" fill="#2F4F4F"/>
+  <circle cx="120" cy="190" r="12" fill="#708090"/>
+  <circle cx="120" cy="190" r="8" fill="#2F4F4F"/>
+  
+  <circle cx="160" cy="190" r="15" fill="#2F4F4F"/>
+  <circle cx="160" cy="190" r="12" fill="#708090"/>
+  <circle cx="160" cy="190" r="8" fill="#2F4F4F"/>
+  
+  <!-- Passenger car -->
+  <rect x="200" y="150" width="60" height="40" fill="#4682B4"/>
+  <rect x="205" y="155" width="50" height="30" fill="#5F9EA0"/>
+  
+  <!-- Car windows -->
+  <rect x="210" y="160" width="15" height="15" fill="#87CEEB"/>
+  <rect x="235" y="160" width="15" height="15" fill="#87CEEB"/>
+  
+  <!-- Car wheels -->
+  <circle cx="220" cy="190" r="12" fill="#4682B4"/>
+  <circle cx="220" cy="190" r="9" fill="#5F9EA0"/>
+  <circle cx="220" cy="190" r="6" fill="#4682B4"/>
+  
+  <circle cx="240" cy="190" r="12" fill="#4682B4"/>
+  <circle cx="240" cy="190" r="9" fill="#5F9EA0"/>
+  <circle cx="240" cy="190" r="6" fill="#4682B4"/>
+  
+  <!-- Museum building -->
+  <rect x="50" y="80" width="100" height="60" fill="#DEB887"/>
+  <rect x="55" y="85" width="90" height="50" fill="#F5DEB3"/>
+  
+  <!-- Museum roof -->
+  <rect x="45" y="70" width="110" height="15" fill="#8B4513"/>
+  
+  <!-- Museum entrance -->
+  <rect x="80" y="120" width="40" height="20" fill="#8B4513"/>
+  <rect x="85" y="125" width="30" height="10" fill="#DEB887"/>
+  
+  <!-- Museum windows -->
+  <rect x="65" y="95" width="15" height="20" fill="#87CEEB"/>
+  <rect x="90" y="95" width="15" height="20" fill="#87CEEB"/>
+  <rect x="115" y="95" width="15" height="20" fill="#87CEEB"/>
+  
+  <!-- Signal post -->
+  <rect x="350" y="150" width="8" height="50" fill="#8B4513"/>
+  <rect x="345" y="150" width="18" height="8" fill="#FF0000"/>
+  
+  <!-- Trees -->
+  <ellipse cx="80" cy="220" rx="15" ry="20" fill="#228B22"/>
+  <ellipse cx="80" cy="220" rx="12" ry="18" fill="#32CD32"/>
+  <rect x="77" y="230" width="6" height="25" fill="#8B4513"/>
+  
+  <ellipse cx="320" cy="220" rx="15" ry="20" fill="#228B22"/>
+  <ellipse cx="320" cy="220" rx="12" ry="18" fill="#32CD32"/>
+  <rect x="317" y="230" width="6" height="25" fill="#8B4513"/>
+  
+  <!-- Sun -->
+  <circle cx="350" cy="40" r="20" fill="#FFD700"/>
+  <circle cx="350" cy="40" r="15" fill="#FFFF00"/>
+  
+  <!-- Birds -->
+  <ellipse cx="100" cy="80" rx="5" ry="3" fill="#87CEEB"/>
+  <ellipse cx="300" cy="60" rx="5" ry="3" fill="#87CEEB"/>
+  <ellipse cx="200" cy="40" rx="5" ry="3" fill="#87CEEB"/>
+</svg>
