@@ -18,6 +18,15 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/tailwind.css'],
 
+  // Runtime config for access control
+  runtimeConfig: {
+    public: {
+      isProduction: process.env.NODE_ENV === 'production',
+      isDevelopment: process.env.NODE_ENV === 'development',
+      adminSecret: process.env.ADMIN_SECRET || 'dev-admin-secret-2024',
+    },
+  },
+
   compatibilityDate: '2025-07-15',
 
   // SSG Configuration
