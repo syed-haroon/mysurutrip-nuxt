@@ -32,6 +32,7 @@
             Stays
           </NuxtLink>
           <NuxtLink
+            v-if="siteStore.showActivities"
             to="/activities"
             class="text-gray-700 hover:text-orange-600 transition-colors font-medium"
             active-class="text-orange-600"
@@ -127,6 +128,7 @@
               Stays
             </NuxtLink>
             <NuxtLink
+              v-if="siteStore.showActivities"
               to="/activities"
               class="block text-gray-700 hover:text-orange-600 transition-colors font-medium"
               active-class="text-orange-600"
@@ -159,6 +161,7 @@
 
 <script setup lang="ts">
 const wishlistStore = useWishlistStore();
+const siteStore = useSiteStore();
 const { itemCount } = storeToRefs(wishlistStore);
 const isMobileMenuOpen = ref(false);
 </script>

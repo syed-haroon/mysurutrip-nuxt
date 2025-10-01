@@ -138,7 +138,7 @@
         <div class="text-gray-500 text-sm">
           <p>&copy; {{ currentYear }} MysuruTrip. All rights reserved.</p>
           <p class="mt-2">
-            Expected launch: Q3 2025
+            Expected launch: Q4 2025
           </p>
         </div>
       </div>

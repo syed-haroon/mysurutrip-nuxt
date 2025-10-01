@@ -2,73 +2,176 @@
   <!-- Background -->
   <rect width="400" height="300" fill="#E0F6FF"/>
   
-  <!-- Sky -->
-  <rect x="0" y="0" width="400" height="150" fill="#87CEEB"/>
+  <!-- Sky gradient -->
+  <rect x="0" y="0" width="400" height="150" fill="url(#skyGradient)"/>
   
-  <!-- Water -->
+  <!-- Enhanced Clouds -->
+  <ellipse cx="60" cy="40" rx="20" ry="12" fill="#FFFFFF" opacity="0.7"/>
+  <ellipse cx="75" cy="38" rx="18" ry="10" fill="#FFFFFF" opacity="0.7"/>
+  <ellipse cx="48" cy="42" rx="15" ry="9" fill="#FFFFFF" opacity="0.7"/>
+  
+  <ellipse cx="280" cy="55" rx="25" ry="14" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="298" cy="52" rx="20" ry="11" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="265" cy="58" rx="18" ry="10" fill="#FFFFFF" opacity="0.6"/>
+  
+  <!-- Water with texture -->
   <ellipse cx="200" cy="200" rx="150" ry="80" fill="#4682B4"/>
+  <ellipse cx="200" cy="200" rx="150" ry="80" fill="url(#waterTexture)" opacity="0.3"/>
   <ellipse cx="200" cy="200" rx="130" ry="70" fill="#5F9EA0"/>
   <ellipse cx="200" cy="200" rx="110" ry="60" fill="#87CEEB"/>
   
-  <!-- Water ripples -->
+  <!-- Enhanced Water ripples -->
   <ellipse cx="200" cy="200" rx="90" ry="50" fill="#B0E0E6"/>
   <ellipse cx="200" cy="200" rx="70" ry="40" fill="#E0F6FF"/>
+  <ellipse cx="200" cy="200" rx="50" ry="30" fill="#F0F8FF"/>
+  <ellipse cx="200" cy="200" rx="30" ry="20" fill="#FFFFFF"/>
   
-  <!-- Islands -->
+  <!-- Island shadows -->
+  <ellipse cx="150" cy="195" rx="25" ry="8" fill="#000000" opacity="0.2"/>
+  <ellipse cx="250" cy="205" rx="25" ry="8" fill="#000000" opacity="0.2"/>
+  <ellipse cx="200" cy="175" rx="20" ry="6" fill="#000000" opacity="0.2"/>
+  
+  <!-- Enhanced Islands -->
   <ellipse cx="150" cy="180" rx="25" ry="15" fill="#90EE90"/>
+  <ellipse cx="150" cy="180" rx="25" ry="15" fill="url(#grassTexture)" opacity="0.3"/>
   <ellipse cx="150" cy="180" rx="20" ry="12" fill="#98FB98"/>
+  <ellipse cx="150" cy="180" rx="15" ry="10" fill="#90EE90"/>
   
   <ellipse cx="250" cy="190" rx="25" ry="15" fill="#90EE90"/>
+  <ellipse cx="250" cy="190" rx="25" ry="15" fill="url(#grassTexture)" opacity="0.3"/>
   <ellipse cx="250" cy="190" rx="20" ry="12" fill="#98FB98"/>
+  <ellipse cx="250" cy="190" rx="15" ry="10" fill="#90EE90"/>
   
   <ellipse cx="200" cy="160" rx="20" ry="12" fill="#90EE90"/>
+  <ellipse cx="200" cy="160" rx="20" ry="12" fill="url(#grassTexture)" opacity="0.3"/>
   <ellipse cx="200" cy="160" rx="15" ry="10" fill="#98FB98"/>
+  <ellipse cx="200" cy="160" rx="10" ry="8" fill="#90EE90"/>
   
-  <!-- Birds -->
+  <!-- Bird shadows -->
+  <ellipse cx="140" cy="185" rx="12" ry="4" fill="#000000" opacity="0.2"/>
+  <ellipse cx="260" cy="195" rx="15" ry="5" fill="#000000" opacity="0.2"/>
+  <ellipse cx="190" cy="165" rx="10" ry="3" fill="#000000" opacity="0.2"/>
+  
+  <!-- Enhanced Birds -->
   <!-- Flamingo -->
   <ellipse cx="140" cy="170" rx="12" ry="8" fill="#FF69B4"/>
   <ellipse cx="140" cy="170" rx="10" ry="6" fill="#FF1493"/>
+  <ellipse cx="140" cy="170" rx="8" ry="5" fill="#FF69B4"/>
   <rect x="138" y="160" width="4" height="20" fill="#FF69B4"/>
+  <rect x="138" y="160" width="4" height="20" fill="url(#featherTexture)" opacity="0.3"/>
   <ellipse cx="140" cy="155" rx="8" ry="6" fill="#FF69B4"/>
+  <ellipse cx="140" cy="155" rx="6" ry="4" fill="#FF1493"/>
+  <!-- Flamingo details -->
+  <ellipse cx="135" cy="152" rx="3" ry="2" fill="#FFB6C1"/>
+  <ellipse cx="145" cy="152" rx="3" ry="2" fill="#FFB6C1"/>
   
   <!-- Pelican -->
   <ellipse cx="260" cy="180" rx="15" ry="10" fill="#87CEEB"/>
   <ellipse cx="260" cy="180" rx="12" ry="8" fill="#B0E0E6"/>
+  <ellipse cx="260" cy="180" rx="10" ry="6" fill="#87CEEB"/>
   <ellipse cx="260" cy="175" rx="10" ry="8" fill="#87CEEB"/>
   <ellipse cx="260" cy="170" rx="8" ry="6" fill="#87CEEB"/>
+  <ellipse cx="260" cy="165" rx="6" ry="4" fill="#B0E0E6"/>
+  <!-- Pelican details -->
+  <ellipse cx="255" cy="168" rx="3" ry="2" fill="#5F9EA0"/>
+  <ellipse cx="265" cy="168" rx="3" ry="2" fill="#5F9EA0"/>
   
   <!-- Heron -->
   <ellipse cx="190" cy="150" rx="10" ry="6" fill="#F5F5DC"/>
   <ellipse cx="190" cy="150" rx="8" ry="5" fill="#F0E68C"/>
+  <ellipse cx="190" cy="150" rx="6" ry="4" fill="#F5F5DC"/>
   <rect x="188" y="140" width="4" height="20" fill="#F5F5DC"/>
+  <rect x="188" y="140" width="4" height="20" fill="url(#featherTexture)" opacity="0.3"/>
   <ellipse cx="190" cy="135" rx="6" ry="4" fill="#F5F5DC"/>
+  <ellipse cx="190" cy="135" rx="4" ry="3" fill="#F0E68C"/>
+  <!-- Heron details -->
+  <ellipse cx="187" cy="132" rx="2" ry="1" fill="#DCDCDC"/>
+  <ellipse cx="193" cy="132" rx="2" ry="1" fill="#DCDCDC"/>
   
-  <!-- Flying birds -->
-  <ellipse cx="80" cy="80" rx="6" ry="4" fill="#87CEEB"/>
-  <ellipse cx="320" cy="60" rx="6" ry="4" fill="#87CEEB"/>
-  <ellipse cx="200" cy="40" rx="6" ry="4" fill="#87CEEB"/>
-  <ellipse cx="100" cy="70" rx="6" ry="4" fill="#87CEEB"/>
-  <ellipse cx="300" cy="50" rx="6" ry="4" fill="#87CEEB"/>
+  <!-- Tree shadows -->
+  <ellipse cx="150" cy="190" rx="12" ry="6" fill="#000000" opacity="0.2"/>
+  <ellipse cx="250" cy="200" rx="12" ry="6" fill="#000000" opacity="0.2"/>
   
-  <!-- Trees on islands -->
+  <!-- Enhanced Trees on islands -->
   <ellipse cx="150" cy="170" rx="12" ry="15" fill="#228B22"/>
   <ellipse cx="150" cy="170" rx="10" ry="13" fill="#32CD32"/>
+  <ellipse cx="150" cy="170" rx="8" ry="11" fill="#3CB371"/>
   <rect x="147" y="175" width="6" height="20" fill="#8B4513"/>
+  <rect x="147" y="175" width="6" height="20" fill="url(#woodTexture)" opacity="0.3"/>
+  <rect x="148" y="177" width="2" height="16" fill="#A0522D"/>
   
   <ellipse cx="250" cy="180" rx="12" ry="15" fill="#228B22"/>
   <ellipse cx="250" cy="180" rx="10" ry="13" fill="#32CD32"/>
+  <ellipse cx="250" cy="180" rx="8" ry="11" fill="#3CB371"/>
   <rect x="247" y="185" width="6" height="20" fill="#8B4513"/>
+  <rect x="247" y="185" width="6" height="20" fill="url(#woodTexture)" opacity="0.3"/>
+  <rect x="248" y="187" width="2" height="16" fill="#A0522D"/>
   
-  <!-- Sun -->
+  <!-- Small plants on islands -->
+  <ellipse cx="145" cy="185" rx="3" ry="5" fill="#228B22"/>
+  <ellipse cx="155" cy="187" rx="3" ry="5" fill="#32CD32"/>
+  <ellipse cx="245" cy="195" rx="3" ry="5" fill="#228B22"/>
+  <ellipse cx="255" cy="197" rx="3" ry="5" fill="#32CD32"/>
+  <ellipse cx="195" cy="175" rx="3" ry="5" fill="#228B22"/>
+  <ellipse cx="205" cy="177" rx="3" ry="5" fill="#32CD32"/>
+  
+  <!-- Enhanced Sun with rays -->
   <circle cx="350" cy="40" r="20" fill="#FFD700"/>
   <circle cx="350" cy="40" r="15" fill="#FFFF00"/>
+  <circle cx="350" cy="40" r="10" fill="#FFD700"/>
+  <line x1="350" y1="15" x2="350" y2="20" stroke="#FFD700" stroke-width="2"/>
+  <line x1="350" y1="60" x2="350" y2="65" stroke="#FFD700" stroke-width="2"/>
+  <line x1="325" y1="40" x2="330" y2="40" stroke="#FFD700" stroke-width="2"/>
+  <line x1="370" y1="40" x2="375" y2="40" stroke="#FFD700" stroke-width="2"/>
+  <line x1="332" y1="22" x2="336" y2="26" stroke="#FFD700" stroke-width="2"/>
+  <line x1="364" y1="54" x2="368" y2="58" stroke="#FFD700" stroke-width="2"/>
+  <line x1="364" y1="26" x2="368" y2="22" stroke="#FFD700" stroke-width="2"/>
+  <line x1="332" y1="54" x2="336" y2="58" stroke="#FFD700" stroke-width="2"/>
   
-  <!-- Clouds -->
-  <ellipse cx="80" cy="30" rx="15" ry="8" fill="white"/>
-  <ellipse cx="95" cy="30" rx="12" ry="6" fill="white"/>
-  <ellipse cx="110" cy="30" rx="15" ry="8" fill="white"/>
+  <!-- Enhanced Flying birds with V-shapes -->
+  <path d="M 75 80 Q 80 78 85 80" stroke="#4A4A4A" stroke-width="1.5" fill="none"/>
+  <path d="M 80 82 L 80 78" stroke="#4A4A4A" stroke-width="1" fill="none"/>
   
-  <ellipse cx="280" cy="20" rx="18" ry="10" fill="white"/>
-  <ellipse cx="300" cy="20" rx="15" ry="8" fill="white"/>
-  <ellipse cx="320" cy="20" rx="18" ry="10" fill="white"/>
+  <path d="M 315 60 Q 320 58 325 60" stroke="#4A4A4A" stroke-width="1.5" fill="none"/>
+  <path d="M 320 62 L 320 58" stroke="#4A4A4A" stroke-width="1" fill="none"/>
+  
+  <path d="M 195 40 Q 200 38 205 40" stroke="#4A4A4A" stroke-width="1.5" fill="none"/>
+  <path d="M 200 42 L 200 38" stroke="#4A4A4A" stroke-width="1" fill="none"/>
+  
+  <path d="M 95 70 Q 100 68 105 70" stroke="#4A4A4A" stroke-width="1.5" fill="none"/>
+  <path d="M 100 72 L 100 68" stroke="#4A4A4A" stroke-width="1" fill="none"/>
+  
+  <path d="M 295 50 Q 300 48 305 50" stroke="#4A4A4A" stroke-width="1.5" fill="none"/>
+  <path d="M 300 52 L 300 48" stroke="#4A4A4A" stroke-width="1" fill="none"/>
+  
+  <!-- Gradients and Patterns -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <pattern id="waterTexture" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <ellipse cx="5" cy="5" rx="2" ry="1" fill="#B0E0E6" opacity="0.3"/>
+      <ellipse cx="15" cy="15" rx="2" ry="1" fill="#B0E0E6" opacity="0.3"/>
+      <ellipse cx="10" cy="10" rx="1" ry="0.5" fill="#E0F6FF" opacity="0.4"/>
+    </pattern>
+    
+    <pattern id="grassTexture" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="5" x2="5" y2="0" stroke="#70D070" stroke-width="0.5"/>
+      <line x1="10" y1="15" x2="15" y2="10" stroke="#70D070" stroke-width="0.5"/>
+      <line x1="5" y1="20" x2="10" y2="15" stroke="#70D070" stroke-width="0.5"/>
+    </pattern>
+    
+    <pattern id="featherTexture" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#FFFFFF" stroke-width="0.3"/>
+      <line x1="1" y1="1" x2="3" y2="1" stroke="#FFFFFF" stroke-width="0.2"/>
+      <line x1="1" y1="3" x2="3" y2="3" stroke="#FFFFFF" stroke-width="0.2"/>
+    </pattern>
+    
+    <pattern id="woodTexture" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="2" x2="8" y2="2" stroke="#A0522D" stroke-width="0.3"/>
+      <line x1="0" y1="6" x2="8" y2="6" stroke="#A0522D" stroke-width="0.3"/>
+    </pattern>
+  </defs>
 </svg>

@@ -28,6 +28,7 @@
             Explore Stays
           </ui-button>
           <ui-button
+            v-if="siteStore.showActivities"
             size="lg"
             variant="outline"
             @click="scrollToActivities"
@@ -46,7 +47,7 @@
     <FeaturedHotels />
 
     <!-- Activities Section -->
-    <FeaturedActivities />
+    <FeaturedActivities v-if="siteStore.showActivities" />
 
     <!-- CTA Section -->
     <section class="py-20 px-4 bg-gradient-to-r from-orange-500 to-red-500">
@@ -88,6 +89,7 @@ useHead({
 
 // Stores
 const wishlistStore = useWishlistStore();
+const siteStore = useSiteStore();
 
 const scrollToHotels = () => {
   document.getElementById('hotels')?.scrollIntoView({ behavior: 'smooth' });

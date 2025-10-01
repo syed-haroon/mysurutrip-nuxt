@@ -2,72 +2,193 @@
   <!-- Background -->
   <rect width="400" height="300" fill="#F0F8FF"/>
   
-  <!-- Sky -->
-  <rect x="0" y="0" width="400" height="150" fill="#87CEEB"/>
+  <!-- Sky gradient -->
+  <rect x="0" y="0" width="400" height="150" fill="url(#skyGradient)"/>
   
-  <!-- Ground -->
+  <!-- Enhanced Clouds -->
+  <ellipse cx="80" cy="30" rx="15" ry="8" fill="#FFFFFF" opacity="0.7"/>
+  <ellipse cx="95" cy="30" rx="12" ry="6" fill="#FFFFFF" opacity="0.7"/>
+  <ellipse cx="110" cy="30" rx="15" ry="8" fill="#FFFFFF" opacity="0.7"/>
+  <ellipse cx="90" cy="25" rx="8" ry="5" fill="#FFFFFF" opacity="0.6"/>
+  
+  <ellipse cx="280" cy="25" rx="18" ry="10" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="300" cy="25" rx="15" ry="8" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="320" cy="25" rx="18" ry="10" fill="#FFFFFF" opacity="0.6"/>
+  
+  <!-- Ground with texture -->
   <rect x="0" y="150" width="400" height="150" fill="#DEB887"/>
+  <rect x="0" y="150" width="400" height="150" fill="url(#groundTexture)" opacity="0.3"/>
   
-  <!-- Market stalls -->
+  <!-- Stall shadows -->
+  <ellipse cx="80" cy="210" rx="30" ry="8" fill="#000000" opacity="0.2"/>
+  <ellipse cx="160" cy="220" rx="30" ry="8" fill="#000000" opacity="0.2"/>
+  <ellipse cx="240" cy="215" rx="30" ry="8" fill="#000000" opacity="0.2"/>
+  <ellipse cx="320" cy="210" rx="30" ry="8" fill="#000000" opacity="0.2"/>
+  
+  <!-- Enhanced Market stalls -->
   <rect x="50" y="120" width="60" height="80" fill="#FF6B6B"/>
   <rect x="55" y="125" width="50" height="70" fill="#FF8E8E"/>
   <rect x="60" y="130" width="40" height="60" fill="#FF6B6B"/>
+  <!-- Stall highlights -->
+  <rect x="52" y="122" width="56" height="2" fill="#FF8E8E"/>
+  <rect x="57" y="127" width="46" height="2" fill="#FFB6C1"/>
   
   <rect x="130" y="130" width="60" height="80" fill="#4ECDC4"/>
   <rect x="135" y="135" width="50" height="70" fill="#7FDDD3"/>
   <rect x="140" y="140" width="40" height="60" fill="#4ECDC4"/>
+  <!-- Stall highlights -->
+  <rect x="132" y="132" width="56" height="2" fill="#7FDDD3"/>
+  <rect x="137" y="137" width="46" height="2" fill="#B0E0E6"/>
   
   <rect x="210" y="125" width="60" height="80" fill="#45B7D1"/>
   <rect x="215" y="130" width="50" height="70" fill="#7BC8E0"/>
   <rect x="220" y="135" width="40" height="60" fill="#45B7D1"/>
+  <!-- Stall highlights -->
+  <rect x="212" y="127" width="56" height="2" fill="#7BC8E0"/>
+  <rect x="217" y="132" width="46" height="2" fill="#B0E0E6"/>
   
   <rect x="290" y="120" width="60" height="80" fill="#96CEB4"/>
   <rect x="295" y="125" width="50" height="70" fill="#B8E0C8"/>
   <rect x="300" y="130" width="40" height="60" fill="#96CEB4"/>
+  <!-- Stall highlights -->
+  <rect x="292" y="122" width="56" height="2" fill="#B8E0C8"/>
+  <rect x="297" y="127" width="46" height="2" fill="#E0F6FF"/>
   
-  <!-- Stall roofs -->
+  <!-- Enhanced Stall roofs with texture -->
   <rect x="45" y="110" width="70" height="15" fill="#8B4513"/>
+  <rect x="45" y="110" width="70" height="15" fill="url(#roofTexture)" opacity="0.3"/>
+  <rect x="47" y="112" width="66" height="2" fill="#A0522D"/>
+  
   <rect x="125" y="120" width="70" height="15" fill="#8B4513"/>
+  <rect x="125" y="120" width="70" height="15" fill="url(#roofTexture)" opacity="0.3"/>
+  <rect x="127" y="122" width="66" height="2" fill="#A0522D"/>
+  
   <rect x="205" y="115" width="70" height="15" fill="#8B4513"/>
+  <rect x="205" y="115" width="70" height="15" fill="url(#roofTexture)" opacity="0.3"/>
+  <rect x="207" y="117" width="66" height="2" fill="#A0522D"/>
+  
   <rect x="285" y="110" width="70" height="15" fill="#8B4513"/>
+  <rect x="285" y="110" width="70" height="15" fill="url(#roofTexture)" opacity="0.3"/>
+  <rect x="287" y="112" width="66" height="2" fill="#A0522D"/>
   
-  <!-- Stall items -->
+  <!-- Enhanced Stall items with details -->
   <circle cx="80" cy="160" r="8" fill="#FFD700"/>
+  <circle cx="80" cy="160" r="6" fill="#FFFF00"/>
+  <circle cx="80" cy="160" r="4" fill="#FFD700"/>
+  <circle cx="78" cy="158" r="1" fill="#FFA500"/>
+  <circle cx="82" cy="162" r="1" fill="#FFA500"/>
+  
   <circle cx="160" cy="160" r="8" fill="#FF69B4"/>
+  <circle cx="160" cy="160" r="6" fill="#FF1493"/>
+  <circle cx="160" cy="160" r="4" fill="#FF69B4"/>
+  <circle cx="158" cy="158" r="1" fill="#FF1493"/>
+  <circle cx="162" cy="162" r="1" fill="#FF1493"/>
+  
   <circle cx="240" cy="160" r="8" fill="#87CEEB"/>
+  <circle cx="240" cy="160" r="6" fill="#B0E0E6"/>
+  <circle cx="240" cy="160" r="4" fill="#87CEEB"/>
+  <circle cx="238" cy="158" r="1" fill="#4682B4"/>
+  <circle cx="242" cy="162" r="1" fill="#4682B4"/>
+  
   <circle cx="320" cy="160" r="8" fill="#32CD32"/>
+  <circle cx="320" cy="160" r="6" fill="#90EE90"/>
+  <circle cx="320" cy="160" r="4" fill="#32CD32"/>
+  <circle cx="318" cy="158" r="1" fill="#228B22"/>
+  <circle cx="322" cy="162" r="1" fill="#228B22"/>
   
+  <!-- Enhanced Stall stands -->
   <rect x="75" y="170" width="10" height="15" fill="#8B4513"/>
-  <rect x="155" y="170" width="10" height="15" fill="#8B4513"/>
-  <rect x="235" y="170" width="10" height="15" fill="#8B4513"/>
-  <rect x="315" y="170" width="10" height="15" fill="#8B4513"/>
+  <rect x="76" y="170" width="3" height="15" fill="#A0522D"/>
+  <rect x="80" y="170" width="3" height="15" fill="#A0522D"/>
   
-  <!-- People -->
+  <rect x="155" y="170" width="10" height="15" fill="#8B4513"/>
+  <rect x="156" y="170" width="3" height="15" fill="#A0522D"/>
+  <rect x="160" y="170" width="3" height="15" fill="#A0522D"/>
+  
+  <rect x="235" y="170" width="10" height="15" fill="#8B4513"/>
+  <rect x="236" y="170" width="3" height="15" fill="#A0522D"/>
+  <rect x="240" y="170" width="3" height="15" fill="#A0522D"/>
+  
+  <rect x="315" y="170" width="10" height="15" fill="#8B4513"/>
+  <rect x="316" y="170" width="3" height="15" fill="#A0522D"/>
+  <rect x="320" y="170" width="3" height="15" fill="#A0522D"/>
+  
+  <!-- People shadows -->
+  <ellipse cx="75" cy="270" rx="8" ry="4" fill="#000000" opacity="0.2"/>
+  <ellipse cx="205" cy="270" rx="8" ry="4" fill="#000000" opacity="0.2"/>
+  <ellipse cx="335" cy="270" rx="8" ry="4" fill="#000000" opacity="0.2"/>
+  
+  <!-- Enhanced People -->
   <ellipse cx="70" cy="250" rx="8" ry="12" fill="#FFB6C1"/>
   <ellipse cx="70" cy="250" rx="6" ry="10" fill="#FFC0CB"/>
+  <ellipse cx="70" cy="250" rx="4" ry="8" fill="#FFB6C1"/>
   <circle cx="68" cy="245" r="2" fill="#000"/>
   <circle cx="72" cy="245" r="2" fill="#000"/>
+  <ellipse cx="70" cy="248" rx="1" ry="0.5" fill="#000"/>
   
   <ellipse cx="200" cy="250" rx="8" ry="12" fill="#87CEEB"/>
   <ellipse cx="200" cy="250" rx="6" ry="10" fill="#B0E0E6"/>
+  <ellipse cx="200" cy="250" rx="4" ry="8" fill="#87CEEB"/>
   <circle cx="198" cy="245" r="2" fill="#000"/>
   <circle cx="202" cy="245" r="2" fill="#000"/>
+  <ellipse cx="200" cy="248" rx="1" ry="0.5" fill="#000"/>
   
   <ellipse cx="330" cy="250" rx="8" ry="12" fill="#98FB98"/>
   <ellipse cx="330" cy="250" rx="6" ry="10" fill="#90EE90"/>
+  <ellipse cx="330" cy="250" rx="4" ry="8" fill="#98FB98"/>
   <circle cx="328" cy="245" r="2" fill="#000"/>
   <circle cx="332" cy="245" r="2" fill="#000"/>
+  <ellipse cx="330" cy="248" rx="1" ry="0.5" fill="#000"/>
   
-  <!-- Market entrance -->
+  <!-- Market entrance shadow -->
+  <ellipse cx="200" cy="120" rx="20" ry="6" fill="#000000" opacity="0.2"/>
+  
+  <!-- Enhanced Market entrance -->
   <rect x="180" y="100" width="40" height="20" fill="#8B4513"/>
   <rect x="185" y="105" width="30" height="10" fill="#DEB887"/>
+  <rect x="185" y="105" width="30" height="10" fill="url(#woodTexture)" opacity="0.3"/>
+  <rect x="187" y="107" width="26" height="2" fill="#A0522D"/>
   
-  <!-- Sun -->
+  <!-- Small plants around market -->
+  <ellipse cx="30" cy="240" rx="4" ry="6" fill="#228B22"/>
+  <ellipse cx="370" cy="240" rx="4" ry="6" fill="#228B22"/>
+  <ellipse cx="100" cy="260" rx="4" ry="6" fill="#228B22"/>
+  <ellipse cx="300" cy="260" rx="4" ry="6" fill="#228B22"/>
+  
+  <!-- Enhanced Sun with rays -->
   <circle cx="350" cy="40" r="20" fill="#FFD700"/>
   <circle cx="350" cy="40" r="15" fill="#FFFF00"/>
+  <circle cx="350" cy="40" r="10" fill="#FFD700"/>
+  <line x1="350" y1="15" x2="350" y2="20" stroke="#FFD700" stroke-width="2"/>
+  <line x1="350" y1="60" x2="350" y2="65" stroke="#FFD700" stroke-width="2"/>
+  <line x1="325" y1="40" x2="330" y2="40" stroke="#FFD700" stroke-width="2"/>
+  <line x1="370" y1="40" x2="375" y2="40" stroke="#FFD700" stroke-width="2"/>
+  <line x1="332" y1="22" x2="336" y2="26" stroke="#FFD700" stroke-width="2"/>
+  <line x1="364" y1="54" x2="368" y2="58" stroke="#FFD700" stroke-width="2"/>
+  <line x1="364" y1="26" x2="368" y2="22" stroke="#FFD700" stroke-width="2"/>
+  <line x1="332" y1="54" x2="336" y2="58" stroke="#FFD700" stroke-width="2"/>
   
-  <!-- Clouds -->
-  <ellipse cx="80" cy="30" rx="15" ry="8" fill="white"/>
-  <ellipse cx="95" cy="30" rx="12" ry="6" fill="white"/>
-  <ellipse cx="110" cy="30" rx="15" ry="8" fill="white"/>
+  <!-- Gradients and Patterns -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F8FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <pattern id="groundTexture" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.5" fill="#C4A574"/>
+      <circle cx="10" cy="10" r="0.5" fill="#C4A574"/>
+      <circle cx="7" cy="12" r="0.3" fill="#8B4513"/>
+    </pattern>
+    
+    <pattern id="roofTexture" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="5" x2="10" y2="5" stroke="#A0522D" stroke-width="0.5"/>
+      <line x1="5" y1="0" x2="5" y2="10" stroke="#A0522D" stroke-width="0.5"/>
+    </pattern>
+    
+    <pattern id="woodTexture" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="2" x2="8" y2="2" stroke="#A0522D" stroke-width="0.3"/>
+      <line x1="0" y1="6" x2="8" y2="6" stroke="#A0522D" stroke-width="0.3"/>
+    </pattern>
+  </defs>
 </svg>

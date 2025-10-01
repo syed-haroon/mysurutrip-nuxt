@@ -20,7 +20,7 @@ export const useSearchFilters = () => {
       dynamic: 'bg-purple-100 text-purple-800',
       rating: 'bg-yellow-100 text-yellow-800',
     };
-    return colors[filterType] || colors.dynamic;
+    return colors[filterType as keyof typeof colors] || colors.dynamic;
   };
 
   // Get filter icon based on filter type
@@ -31,7 +31,7 @@ export const useSearchFilters = () => {
       dynamic: 'lucide:clock',
       rating: 'lucide:star',
     };
-    return icons[filterType] || icons.dynamic;
+    return icons[filterType as keyof typeof icons] || icons.dynamic;
   };
 
   return {

@@ -2,88 +2,216 @@
   <!-- Background -->
   <rect width="400" height="300" fill="#F0F8FF"/>
   
-  <!-- Sky -->
-  <rect x="0" y="0" width="400" height="150" fill="#87CEEB"/>
+  <!-- Sky gradient -->
+  <rect x="0" y="0" width="400" height="150" fill="url(#skyGradient)"/>
   
-  <!-- Sand ground -->
+  <!-- Enhanced Clouds -->
+  <ellipse cx="60" cy="40" rx="20" ry="12" fill="#FFFFFF" opacity="0.7"/>
+  <ellipse cx="75" cy="38" rx="18" ry="10" fill="#FFFFFF" opacity="0.7"/>
+  <ellipse cx="48" cy="42" rx="15" ry="9" fill="#FFFFFF" opacity="0.7"/>
+  
+  <ellipse cx="280" cy="55" rx="25" ry="14" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="298" cy="52" rx="20" ry="11" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="265" cy="58" rx="18" ry="10" fill="#FFFFFF" opacity="0.6"/>
+  
+  <!-- Sand ground with texture -->
   <rect x="0" y="150" width="400" height="150" fill="#F4A460"/>
+  <rect x="0" y="150" width="400" height="150" fill="url(#sandTexture)" opacity="0.3"/>
   <rect x="0" y="160" width="400" height="140" fill="#DEB887"/>
+  <rect x="0" y="160" width="400" height="140" fill="url(#sandTexture)" opacity="0.2"/>
   
-  <!-- Sand sculptures -->
+  <!-- Sand sculpture shadows -->
+  <ellipse cx="110" cy="165" rx="30" ry="6" fill="#000000" opacity="0.2"/>
+  <ellipse cx="250" cy="155" rx="25" ry="5" fill="#000000" opacity="0.2"/>
+  <ellipse cx="180" cy="150" rx="12" ry="4" fill="#000000" opacity="0.2"/>
+  
+  <!-- Enhanced Sand sculptures -->
   <!-- Castle sculpture -->
   <rect x="80" y="120" width="60" height="40" fill="#F4A460"/>
+  <rect x="80" y="120" width="60" height="40" fill="url(#sandTexture)" opacity="0.2"/>
   <rect x="85" y="125" width="50" height="30" fill="#DEB887"/>
   <rect x="90" y="130" width="40" height="20" fill="#F4A460"/>
+  <!-- Castle highlights -->
+  <rect x="82" y="122" width="56" height="2" fill="#F5DEB3"/>
+  <rect x="87" y="127" width="46" height="2" fill="#FFFFE0"/>
   
   <!-- Castle towers -->
   <rect x="85" y="100" width="15" height="25" fill="#F4A460"/>
+  <rect x="85" y="100" width="15" height="25" fill="url(#sandTexture)" opacity="0.2"/>
   <rect x="90" y="105" width="5" height="15" fill="#DEB887"/>
+  <rect x="87" y="102" width="11" height="2" fill="#F5DEB3"/>
   
   <rect x="120" y="100" width="15" height="25" fill="#F4A460"/>
+  <rect x="120" y="100" width="15" height="25" fill="url(#sandTexture)" opacity="0.2"/>
   <rect x="125" y="105" width="5" height="15" fill="#DEB887"/>
+  <rect x="122" y="102" width="11" height="2" fill="#F5DEB3"/>
   
   <!-- Castle entrance -->
   <rect x="105" y="150" width="10" height="10" fill="#8B4513"/>
+  <rect x="105" y="150" width="10" height="10" fill="url(#woodTexture)" opacity="0.3"/>
+  <rect x="107" y="152" width="6" height="2" fill="#A0522D"/>
   
   <!-- Animal sculpture -->
   <ellipse cx="250" cy="140" rx="25" ry="15" fill="#F4A460"/>
+  <ellipse cx="250" cy="140" rx="25" ry="15" fill="url(#sandTexture)" opacity="0.2"/>
   <ellipse cx="250" cy="140" rx="20" ry="12" fill="#DEB887"/>
   <ellipse cx="245" cy="135" rx="8" ry="6" fill="#F4A460"/>
   <ellipse cx="255" cy="135" rx="8" ry="6" fill="#F4A460"/>
   <circle cx="243" cy="133" r="2" fill="#8B4513"/>
   <circle cx="257" cy="133" r="2" fill="#8B4513"/>
+  <!-- Animal details -->
+  <ellipse cx="248" cy="138" rx="6" ry="4" fill="#F5DEB3"/>
+  <ellipse cx="252" cy="138" rx="6" ry="4" fill="#F5DEB3"/>
   
   <!-- Human figure sculpture -->
   <ellipse cx="180" cy="130" rx="12" ry="15" fill="#F4A460"/>
+  <ellipse cx="180" cy="130" rx="12" ry="15" fill="url(#sandTexture)" opacity="0.2"/>
   <ellipse cx="180" cy="130" rx="10" ry="13" fill="#DEB887"/>
   <rect x="175" y="140" width="10" height="25" fill="#F4A460"/>
+  <rect x="175" y="140" width="10" height="25" fill="url(#sandTexture)" opacity="0.2"/>
   <rect x="173" y="145" width="4" height="20" fill="#F4A460"/>
   <rect x="189" y="145" width="4" height="20" fill="#F4A460"/>
+  <!-- Human details -->
+  <ellipse cx="178" cy="128" rx="4" ry="6" fill="#F5DEB3"/>
+  <ellipse cx="182" cy="128" rx="4" ry="6" fill="#F5DEB3"/>
   
-  <!-- Museum building -->
+  <!-- Museum building shadow -->
+  <ellipse cx="90" cy="110" rx="40" ry="6" fill="#000000" opacity="0.2"/>
+  
+  <!-- Enhanced Museum building -->
   <rect x="50" y="80" width="80" height="50" fill="#DEB887"/>
+  <rect x="50" y="80" width="80" height="50" fill="url(#sandTexture)" opacity="0.2"/>
   <rect x="55" y="85" width="70" height="40" fill="#F5DEB3"/>
+  <rect x="60" y="90" width="60" height="30" fill="#DEB887"/>
+  <!-- Building highlights -->
+  <rect x="52" y="82" width="76" height="2" fill="#F5DEB3"/>
+  <rect x="57" y="87" width="66" height="2" fill="#FFFFE0"/>
   
-  <!-- Museum roof -->
+  <!-- Enhanced Museum roof -->
   <rect x="45" y="70" width="90" height="15" fill="#8B4513"/>
+  <rect x="45" y="70" width="90" height="15" fill="url(#roofTexture)" opacity="0.3"/>
+  <rect x="47" y="72" width="86" height="2" fill="#A0522D"/>
   
-  <!-- Museum entrance -->
+  <!-- Museum entrance shadow -->
+  <ellipse cx="90" cy="130" rx="20" ry="6" fill="#000000" opacity="0.2"/>
+  
+  <!-- Enhanced Museum entrance -->
   <rect x="70" y="110" width="40" height="20" fill="#8B4513"/>
   <rect x="75" y="115" width="30" height="10" fill="#DEB887"/>
+  <rect x="75" y="115" width="30" height="10" fill="url(#woodTexture)" opacity="0.3"/>
+  <rect x="77" y="117" width="26" height="2" fill="#A0522D"/>
   
-  <!-- Museum windows -->
+  <!-- Enhanced Museum windows -->
   <rect x="60" y="90" width="15" height="20" fill="#87CEEB"/>
-  <rect x="85" y="90" width="15" height="20" fill="#87CEEB"/>
+  <rect x="60" y="90" width="15" height="20" fill="url(#windowTexture)" opacity="0.3"/>
+  <rect x="62" y="92" width="11" height="16" fill="#B0E0E6"/>
   
-  <!-- Beach umbrellas -->
+  <rect x="85" y="90" width="15" height="20" fill="#87CEEB"/>
+  <rect x="85" y="90" width="15" height="20" fill="url(#windowTexture)" opacity="0.3"/>
+  <rect x="87" y="92" width="11" height="16" fill="#B0E0E6"/>
+  
+  <!-- Beach umbrella shadows -->
+  <ellipse cx="320" cy="205" rx="20" ry="4" fill="#000000" opacity="0.2"/>
+  <ellipse cx="350" cy="215" rx="18" ry="4" fill="#000000" opacity="0.2"/>
+  
+  <!-- Enhanced Beach umbrellas -->
   <ellipse cx="320" cy="180" rx="20" ry="8" fill="#FF69B4"/>
   <ellipse cx="320" cy="180" rx="15" ry="6" fill="#FFB6C1"/>
+  <ellipse cx="320" cy="180" rx="10" ry="4" fill="#FF69B4"/>
   <rect x="318" y="180" width="4" height="25" fill="#8B4513"/>
+  <rect x="318" y="180" width="4" height="25" fill="url(#woodTexture)" opacity="0.3"/>
+  <rect x="319" y="182" width="2" height="21" fill="#A0522D"/>
   
   <ellipse cx="350" cy="190" rx="18" ry="7" fill="#87CEEB"/>
   <ellipse cx="350" cy="190" rx="13" ry="5" fill="#B0E0E6"/>
+  <ellipse cx="350" cy="190" rx="8" ry="3" fill="#87CEEB"/>
   <rect x="348" y="190" width="4" height="25" fill="#8B4513"/>
+  <rect x="348" y="190" width="4" height="25" fill="url(#woodTexture)" opacity="0.3"/>
+  <rect x="349" y="192" width="2" height="21" fill="#A0522D"/>
   
-  <!-- Palm trees -->
+  <!-- Palm tree shadows -->
+  <ellipse cx="65" cy="220" rx="12" ry="6" fill="#000000" opacity="0.2"/>
+  <ellipse cx="335" cy="220" rx="12" ry="6" fill="#000000" opacity="0.2"/>
+  
+  <!-- Enhanced Palm trees -->
   <ellipse cx="60" cy="200" rx="12" ry="15" fill="#228B22"/>
   <ellipse cx="60" cy="200" rx="10" ry="13" fill="#32CD32"/>
+  <ellipse cx="60" cy="200" rx="8" ry="11" fill="#3CB371"/>
   <rect x="57" y="205" width="6" height="25" fill="#8B4513"/>
+  <rect x="57" y="205" width="6" height="25" fill="url(#woodTexture)" opacity="0.3"/>
+  <rect x="58" y="207" width="2" height="21" fill="#A0522D"/>
+  <!-- Palm fronds -->
+  <ellipse cx="55" cy="195" rx="10" ry="2" fill="#228B22" transform="rotate(-30 55 195)"/>
+  <ellipse cx="65" cy="195" rx="10" ry="2" fill="#32CD32" transform="rotate(30 65 195)"/>
+  <ellipse cx="60" cy="190" rx="8" ry="2" fill="#3CB371" transform="rotate(0 60 190)"/>
   
   <ellipse cx="340" cy="200" rx="12" ry="15" fill="#228B22"/>
   <ellipse cx="340" cy="200" rx="10" ry="13" fill="#32CD32"/>
+  <ellipse cx="340" cy="200" rx="8" ry="11" fill="#3CB371"/>
   <rect x="337" y="205" width="6" height="25" fill="#8B4513"/>
+  <rect x="337" y="205" width="6" height="25" fill="url(#woodTexture)" opacity="0.3"/>
+  <rect x="338" y="207" width="2" height="21" fill="#A0522D"/>
+  <!-- Palm fronds -->
+  <ellipse cx="335" cy="195" rx="10" ry="2" fill="#228B22" transform="rotate(-30 335 195)"/>
+  <ellipse cx="345" cy="195" rx="10" ry="2" fill="#32CD32" transform="rotate(30 345 195)"/>
+  <ellipse cx="340" cy="190" rx="8" ry="2" fill="#3CB371" transform="rotate(0 340 190)"/>
   
-  <!-- Sun -->
+  <!-- Small plants around sculptures -->
+  <ellipse cx="40" cy="270" rx="3" ry="5" fill="#228B22"/>
+  <ellipse cx="360" cy="270" rx="3" ry="5" fill="#228B22"/>
+  <ellipse cx="120" cy="280" rx="3" ry="5" fill="#228B22"/>
+  <ellipse cx="280" cy="280" rx="3" ry="5" fill="#228B22"/>
+  <ellipse cx="200" cy="285" rx="3" ry="5" fill="#228B22"/>
+  
+  <!-- Enhanced Sun with rays -->
   <circle cx="350" cy="40" r="20" fill="#FFD700"/>
   <circle cx="350" cy="40" r="15" fill="#FFFF00"/>
+  <circle cx="350" cy="40" r="10" fill="#FFD700"/>
+  <line x1="350" y1="15" x2="350" y2="20" stroke="#FFD700" stroke-width="2"/>
+  <line x1="350" y1="60" x2="350" y2="65" stroke="#FFD700" stroke-width="2"/>
+  <line x1="325" y1="40" x2="330" y2="40" stroke="#FFD700" stroke-width="2"/>
+  <line x1="370" y1="40" x2="375" y2="40" stroke="#FFD700" stroke-width="2"/>
+  <line x1="332" y1="22" x2="336" y2="26" stroke="#FFD700" stroke-width="2"/>
+  <line x1="364" y1="54" x2="368" y2="58" stroke="#FFD700" stroke-width="2"/>
+  <line x1="364" y1="26" x2="368" y2="22" stroke="#FFD700" stroke-width="2"/>
+  <line x1="332" y1="54" x2="336" y2="58" stroke="#FFD700" stroke-width="2"/>
   
-  <!-- Birds -->
-  <ellipse cx="100" cy="80" rx="5" ry="3" fill="#87CEEB"/>
-  <ellipse cx="300" cy="60" rx="5" ry="3" fill="#87CEEB"/>
-  <ellipse cx="200" cy="40" rx="5" ry="3" fill="#87CEEB"/>
+  <!-- Enhanced Birds with V-shapes -->
+  <path d="M 95 80 Q 100 78 105 80" stroke="#4A4A4A" stroke-width="1.5" fill="none"/>
+  <path d="M 100 82 L 100 78" stroke="#4A4A4A" stroke-width="1" fill="none"/>
   
-  <!-- Clouds -->
-  <ellipse cx="80" cy="30" rx="15" ry="8" fill="white"/>
-  <ellipse cx="95" cy="30" rx="12" ry="6" fill="white"/>
-  <ellipse cx="110" cy="30" rx="15" ry="8" fill="white"/>
+  <path d="M 295 60 Q 300 58 305 60" stroke="#4A4A4A" stroke-width="1.5" fill="none"/>
+  <path d="M 300 62 L 300 58" stroke="#4A4A4A" stroke-width="1" fill="none"/>
+  
+  <path d="M 195 40 Q 200 38 205 40" stroke="#4A4A4A" stroke-width="1.5" fill="none"/>
+  <path d="M 200 42 L 200 38" stroke="#4A4A4A" stroke-width="1" fill="none"/>
+  
+  <!-- Gradients and Patterns -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F8FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <pattern id="sandTexture" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.5" fill="#DEB887"/>
+      <circle cx="10" cy="10" r="0.5" fill="#DEB887"/>
+      <circle cx="7" cy="12" r="0.3" fill="#F4A460"/>
+    </pattern>
+    
+    <pattern id="roofTexture" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="5" x2="10" y2="5" stroke="#A0522D" stroke-width="0.5"/>
+      <line x1="5" y1="0" x2="5" y2="10" stroke="#A0522D" stroke-width="0.5"/>
+    </pattern>
+    
+    <pattern id="woodTexture" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="2" x2="8" y2="2" stroke="#A0522D" stroke-width="0.3"/>
+      <line x1="0" y1="6" x2="8" y2="6" stroke="#A0522D" stroke-width="0.3"/>
+    </pattern>
+    
+    <pattern id="windowTexture" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#4682B4" stroke-width="0.3"/>
+      <line x1="3" y1="0" x2="3" y2="6" stroke="#4682B4" stroke-width="0.3"/>
+    </pattern>
+  </defs>
 </svg>

@@ -5,15 +5,14 @@
       <nuxt-page />
     </nuxt-layout>
     <app-footer v-if="shouldShowNavigation" />
-    <admin-access-panel />
   </div>
 </template>
 
 <script setup lang="ts">
-const { shouldShowComingSoon } = useAccessControl();
+const route = useRoute();
+const shouldShowNavigation = ref(true);
 
-// Hide navigation and footer when showing coming soon page
-const shouldShowNavigation = computed(() => {
-  return !shouldShowComingSoon.value;
-});
+if (route.path === '/coming-soon') {
+  shouldShowNavigation.value = false;
+}
 </script>

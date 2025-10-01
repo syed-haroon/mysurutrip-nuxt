@@ -128,6 +128,9 @@
 </template>
 
 <script setup lang="ts">
+// Store
+const siteStore = useSiteStore();
+
 // Social media links configuration
 const socialLinks = [
   {
@@ -157,13 +160,21 @@ const socialLinks = [
 ];
 
 // Quick links configuration
-const quickLinks = [
-  { to: '/', label: 'Home' },
-  { to: '/hotels', label: 'Hotels & Accommodation' },
-  { to: '/activities', label: 'Activities & Tours' },
-  { to: '/explore', label: 'Explore Attractions' },
-  { to: '/get-quote', label: 'Get Quote' },
-];
+const quickLinks = computed(() => {
+  const links = [
+    { to: '/', label: 'Home' },
+    { to: '/hotels', label: 'Hotels & Accommodation' },
+    { to: '/explore', label: 'Explore Attractions' },
+    { to: '/get-quote', label: 'Get Quote' },
+  ];
+  
+  // Add activities link only if enabled
+  if (siteStore.showActivities) {
+    links.splice(2, 0, { to: '/activities', label: 'Activities & Tours' });
+  }
+  
+  return links;
+});
 
 // Services configuration
 const services = [
