@@ -46,19 +46,31 @@
           >
             Explore
           </NuxtLink>
-          <NuxtLink
-            to="/get-quote"
-            class="text-gray-700 hover:text-orange-600 transition-colors font-medium"
-            active-class="text-orange-600"
-          >
-            Get Quote
-          </NuxtLink>
         </div>
 
         <!-- Right Side -->
         <div class="flex items-center space-x-4">
+          <!-- Phone Number -->
+          <a
+            href="tel:+91-9845448902"
+            class="hidden lg:flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100 hover:from-blue-100 hover:to-indigo-100 transition-all"
+            title="Call Now"
+          >
+            <div class="flex bg-blue-500 rounded-full p-1 size-8">
+              <icon
+                name="lucide:phone"
+                class="text-lg text-white m-auto"
+              />
+            </div>
+            <div class="text-sm leading-tight">
+              <div class="text-blue-600 font-medium">Call Now</div>
+              <div class="text-blue-700 font-bold">+91 98454 48902</div>
+            </div>
+          </a>
+
           <!-- Wishlist Indicator -->
           <NuxtLink
+            v-if="itemCount > 0"
             to="/get-quote"
             class="relative p-2 text-gray-700 hover:text-orange-600 transition-colors"
             title="View Wishlist"
@@ -67,13 +79,20 @@
               variant="outline"
               size="lg"
             />
-            <span
-              v-if="itemCount > 0"
-              class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium"
-            >
+            <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
               {{ itemCount }}
             </span>
           </NuxtLink>
+          <div
+            v-else
+            class="relative p-2 text-gray-400 cursor-not-allowed"
+            title="No items in wishlist"
+          >
+            <icon-heart
+              variant="outline"
+              size="lg"
+            />
+          </div>
 
           <!-- CTA Button -->
           <ui-button

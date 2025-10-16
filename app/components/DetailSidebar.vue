@@ -6,6 +6,29 @@
       class="bg-white rounded-lg shadow-sm p-6 sticky top-20 z-10"
     >
       <div class="text-center mb-6">
+        <!-- Prominent Phone Number -->
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4 mb-4 border border-blue-100">
+          <div class="flex items-center justify-center gap-3">
+            <div class="flex size-10 bg-blue-500 rounded-full p-2">
+              <icon
+                name="lucide:phone"
+                class="text-xl text-white m-auto"
+              />
+            </div>
+            <div>
+              <div class="text-sm text-blue-600 font-medium">
+                Call Now
+              </div>
+              <a
+                href="tel:+91-9845448902"
+                class="text-xl font-bold text-blue-700 hover:text-blue-800 transition-colors"
+              >
+                +91 98454 48902
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div class="text-3xl font-bold text-gray-900 mb-2">
           Contact for Pricing
         </div>
@@ -38,7 +61,7 @@
         <ui-button
           variant="outline"
           class="w-full"
-          @click="navigateTo('/get-quote')"
+          @click="handleGetQuote"
         >
           <icon
             name="lucide:message-square"
@@ -90,59 +113,14 @@
       </div>
     </div>
 
-    <!-- Contact Info -->
-    <div class="bg-white rounded-lg shadow-sm p-6">
-      <h4 class="font-semibold text-gray-900 mb-4">
-        Contact Information
-      </h4>
-      <div class="space-y-3 text-sm">
-        <div class="flex items-center gap-3">
-          <icon
-            name="lucide:phone"
-            class="w-4 h-4 text-gray-500"
-          />
-          <a
-            href="tel:+918211234567"
-            class="hover:underline"
-          >
-            +91 ‭98454 48902‬
-          </a>
-        </div>
-        <div class="flex items-center gap-3">
-          <icon
-            name="lucide:mail"
-            class="w-4 h-4 text-gray-500"
-          />
-          <a
-            href="mailto:info@mysurutrip.com"
-            class="hover:underline"
-          >
-            info@mysurutrip.com
-          </a>
-        </div>
-        <div class="flex items-center gap-3">
-          <icon
-            name="lucide:globe"
-            class="w-4 h-4 text-gray-500"
-          />
-          <a
-            href="https://www.mysurutrip.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:underline"
-          >
-            www.mysurutrip.com
-          </a>
-        </div>
-      </div>
-    </div>
-
     <!-- Additional Info (optional slot) -->
     <slot name="additional-info" />
   </div>
 </template>
 
 <script setup lang="ts">
+import { toast } from 'vue-sonner';
+
 interface Props {
   type: 'activity' | 'hotel' | 'explore';
   item: {
@@ -228,5 +206,21 @@ const timeValues = computed(() => {
 // Methods
 const addToWishlist = () => {
   emit('addToWishlist');
+  toast('Added to wishlist', {
+    description: `${props.item.displayName} has been added to your wishlist`,
+    action: {
+      label: 'View Wishlist',
+      onClick: () => navigateTo('/get-quote'),
+    },
+  });
+};
+
+const handleGetQuote = () => {
+  // Add to wishlist first, then navigate
+  emit('addToWishlist');
+  toast('Added to wishlist', {
+    description: `${props.item.displayName} has been added to your wishlist`,
+  });
+  navigateTo('/get-quote');
 };
 </script>

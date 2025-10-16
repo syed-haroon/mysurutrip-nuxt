@@ -112,6 +112,20 @@ useHead({
 // Stores
 const wishlistStore = useWishlistStore();
 
+// Helper function to get featured image or first image
+const getFeaturedImage = (images: unknown[] | undefined) => {
+  if (!images || images.length === 0) return null;
+
+  // If images is an array of objects with imgURL property
+  if (typeof images[0] === 'object' && images[0].imgURL) {
+    const featuredImage = images.find(img => img.isFeatured);
+    return featuredImage ? featuredImage.imgURL : images[0].imgURL;
+  }
+
+  // If images is an array of strings (legacy format)
+  return images[0];
+};
+
 // Data
 // Fetch hotels data using Nuxt Content v3
 const { data: hotels } = await useAsyncData<Hotel[]>(
@@ -186,7 +200,7 @@ const addToWishlist = (item: { path?: string; title: string; images?: string[]; 
       id: item.path || item.title,
       type: 'hotel',
       title: item.title,
-      image: item.images?.[0] || '/images/placeholder.jpg',
+      image: getFeaturedImage(item.images) || '/images/placeholder.jpg',
       location: item.location,
     });
   }

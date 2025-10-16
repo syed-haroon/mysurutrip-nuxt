@@ -2,11 +2,11 @@
   <div class="relative">
     <!-- Single Image Background (when only one image) -->
     <div
-      v-if="images && images.length === 1"
+      v-if="processedImages && processedImages.length === 1"
       class="relative h-96 md:h-[500px] w-full"
     >
       <nuxt-img
-        :src="images[0]"
+        :src="processedImages[0]"
         :alt="`${title} - Hero Image`"
         class="w-full h-full object-cover"
         sizes="100vw"
@@ -17,8 +17,8 @@
 
     <!-- Image Carousel (when multiple images) -->
     <ImageCarousel
-      v-else-if="images && images.length > 1"
-      :images="images"
+      v-else-if="processedImages && processedImages.length > 1"
+      :images="processedImages"
       :title="title"
     />
 
@@ -32,7 +32,7 @@
 
     <!-- Overlay Content (for single images and fallback) -->
     <div
-      v-if="!images || images.length <= 1"
+      v-if="!processedImages || processedImages.length <= 1"
       class="absolute inset-0 flex items-center justify-center pointer-events-none"
     >
       <div class="text-center text-white">
@@ -58,11 +58,20 @@
 
 <script setup lang="ts">
 interface Props {
-  images?: string[];
+  images?: unknown[];
   title: string;
   subtitle?: string;
   location?: string;
 }
 
-defineProps<Props>();
+const props = defineProps<Props>();
+
+// Process featured images (isFeatured: true) for carousel
+const processedImages = computed(() => {
+  if (!props.images || props.images.length === 0) return [];
+
+  // Filter featured images and extract URLs
+  const featuredImages = props.images.filter(img => img && img.isFeatured === true);
+  return featuredImages.map(img => img.imgURL);
+});
 </script>

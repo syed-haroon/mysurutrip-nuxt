@@ -1,16 +1,38 @@
 ---
-title: "Royal Mysuru Palace Hotel 222"
+title: "Royal Mysuru Palace Hotel 222" # Real name - admin only
+displayName: "Royal Heritage Palace" # Made-up name for customers
+id: "royal-heritage-palace" # Dynamic ID for URLs and file paths
 description: "Experience luxury and heritage at the heart of Mysuru, featuring palace-inspired architecture and world-class amenities."
 type: "hotel"
 category: "luxury"
 location: "Mysuru Palace Road, Mysuru"
 rating: 4.8
 priceRange: "₹8,000 - ₹25,000"
-path: "royal-mysuru-palace"
-images:
-  - "/images/hotels/royal-mysuru-palace-1.svg"
-  - "/images/hotels/royal-mysuru-palace-1.svg"
-  - "/images/hotels/royal-mysuru-palace-1.svg"
+path: "royal-heritage-palace"
+featuredImages:
+  - imgURL: "/images/hotels/royal-heritage-palace/royal-mysuru-palace-1.svg"
+    thumbURL: "/images/hotels/royal-heritage-palace/royal-mysuru-palace-1.svg"
+    alt: "Royal Heritage Palace exterior"
+  - imgURL: "/images/hotels/royal-heritage-palace/royal-mysuru-palace-1.svg"
+    thumbURL: "/images/hotels/royal-heritage-palace/royal-mysuru-palace-1.svg"
+    alt: "Luxury lobby area"
+  - imgURL: "/images/hotels/royal-heritage-palace/royal-mysuru-palace-1.svg"
+    thumbURL: "/images/hotels/royal-heritage-palace/royal-mysuru-palace-1.svg"
+    alt: "Deluxe room interior"
+
+allImages:
+  - imgURL: "/images/hotels/royal-heritage-palace/royal-mysuru-palace-1.svg"
+    thumbURL: "/images/hotels/royal-heritage-palace/royal-mysuru-palace-1.svg"
+    type: "exterior"
+    alt: "Royal Heritage Palace exterior"
+  - imgURL: "/images/hotels/royal-heritage-palace/royal-mysuru-palace-1.svg"
+    thumbURL: "/images/hotels/royal-heritage-palace/royal-mysuru-palace-1.svg"
+    type: "common"
+    alt: "Luxury lobby area"
+  - imgURL: "/images/hotels/royal-heritage-palace/royal-mysuru-palace-1.svg"
+    thumbURL: "/images/hotels/royal-heritage-palace/royal-mysuru-palace-1.svg"
+    type: "room-deluxe"
+    alt: "Deluxe room interior"
 amenities:
   - "Swimming Pool"
   - "Spa & Wellness Center"

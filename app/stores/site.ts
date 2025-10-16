@@ -7,6 +7,10 @@ export const useSiteStore = defineStore('site', () => {
   // Toggle for activities pages
   const showActivities = ref(false); // Set to true to show activities pages
 
+  // Admin authentication
+  const isAdmin = ref(false);
+  const adminPassword = 'iAmAdmin!'; // Static admin password
+
   const toggleComingSoon = () => {
     showComingSoon.value = !showComingSoon.value;
   };
@@ -23,12 +27,44 @@ export const useSiteStore = defineStore('site', () => {
     showActivities.value = value;
   };
 
+  // Admin authentication methods
+  const authenticateAdmin = (password: string) => {
+    if (password === adminPassword) {
+      isAdmin.value = true;
+      return true;
+    }
+    return false;
+  };
+
+  const logoutAdmin = () => {
+    isAdmin.value = false;
+  };
+
+  const checkAdminFromUrl = () => {
+    // Check if admin password is in URL params
+    if (import.meta.client) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const pass = urlParams.get('pass');
+      if (pass === adminPassword) {
+        isAdmin.value = true;
+        // Remove password from URL for security
+        const newUrl = new URL(window.location.href);
+        newUrl.searchParams.delete('pass');
+        window.history.replaceState({}, '', newUrl.toString());
+      }
+    }
+  };
+
   return {
-    showComingSoon: readonly(showComingSoon),
+    showComingSoon,
     toggleComingSoon,
     setComingSoon,
-    showActivities: readonly(showActivities),
+    showActivities,
     toggleActivities,
     setActivities,
+    isAdmin,
+    authenticateAdmin,
+    logoutAdmin,
+    checkAdminFromUrl,
   };
 });

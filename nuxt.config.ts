@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
 
-  ssr: true, // still needed for prerender
+  ssr: true,
   devtools: { enabled: true },
 
   css: ['~/assets/css/tailwind.css'],

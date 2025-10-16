@@ -16,7 +16,7 @@
         v-if="wishlistStore && wishlistStore.itemCount > 0"
         class="mb-8"
       >
-        <ui-card class="bg-orange-50 border-orange-200">
+        <ui-card class="bg-orange-50 border-orange-200 p-0">
           <div class="p-6">
             <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
               <icon-heart
@@ -39,7 +39,7 @@
                 >
                 <div class="flex-1 min-w-0">
                   <h4 class="font-medium text-gray-900 truncate">
-                    {{ item.title }}
+                    {{ item.displayName || item.title }}
                   </h4>
                   <p class="text-sm text-gray-600">
                     {{ item.location }}
@@ -426,14 +426,27 @@ useHead({
 const wishlistStore = useWishlistStore();
 const leadsStore = useLeadsStore();
 
-// Form validation schema
+// Form validation schema - Updated to fix vee-validate console errors
 const formSchema = toTypedSchema(z.object({
   tripType: z.enum(['honeymoon', 'family', 'business', 'friends', 'solo']),
   checkIn: z.string().min(1, 'Check-in date is required'),
   checkOut: z.string().min(1, 'Check-out date is required'),
   guestCount: z.string().min(1, 'Guest count is required'),
-  foodPreferences: z.record(z.string(), z.boolean()).optional(),
-  addOns: z.record(z.string(), z.boolean()).optional(),
+  foodPreferences: z.object({
+    vegetarian: z.boolean().optional(),
+    nonVegetarian: z.boolean().optional(),
+    vegan: z.boolean().optional(),
+    jain: z.boolean().optional(),
+    halal: z.boolean().optional(),
+    glutenFree: z.boolean().optional(),
+  }).optional(),
+  addOns: z.object({
+    campfire: z.boolean().optional(),
+    spa: z.boolean().optional(),
+    taxi: z.boolean().optional(),
+    guide: z.boolean().optional(),
+    photography: z.boolean().optional(),
+  }).optional(),
   contactInfo: z.object({
     name: z.string().min(2, 'Name must be at least 2 characters'),
     email: z.string().email('Please enter a valid email'),
@@ -450,8 +463,21 @@ const { handleSubmit, setFieldValue, values: _formValues } = useForm({
     checkIn: '',
     checkOut: '',
     guestCount: '2',
-    foodPreferences: {},
-    addOns: {},
+    foodPreferences: {
+      vegetarian: false,
+      nonVegetarian: false,
+      vegan: false,
+      jain: false,
+      halal: false,
+      glutenFree: false,
+    },
+    addOns: {
+      campfire: false,
+      spa: false,
+      taxi: false,
+      guide: false,
+      photography: false,
+    },
     contactInfo: {
       name: '',
       email: '',
@@ -501,11 +527,11 @@ const handleSetCheckOutDate = (v: DateValue | undefined) => {
 // Data
 const foodPreferenceOptions = [
   { value: 'vegetarian', label: 'Vegetarian', emoji: '🥗' },
-  { value: 'non-vegetarian', label: 'Non-Vegetarian', emoji: '🍗' },
+  { value: 'nonVegetarian', label: 'Non-Vegetarian', emoji: '🍗' },
   { value: 'vegan', label: 'Vegan', emoji: '🌱' },
   { value: 'jain', label: 'Jain', emoji: '🙏' },
   { value: 'halal', label: 'Halal', emoji: '🕌' },
-  { value: 'gluten-free', label: 'Gluten-Free', emoji: '🌾' },
+  { value: 'glutenFree', label: 'Gluten-Free', emoji: '🌾' },
 ];
 
 const addOns = [
@@ -527,42 +553,73 @@ const onSubmit = handleSubmit(async (values) => {
   isSubmitting.value = true;
 
   try {
-    // Transform checkbox records to arrays
-    const selectedFoodPreferences = Object.keys(values.foodPreferences || {}).filter(
-      key => values.foodPreferences?.[key],
-    );
-
-    const selectedAddOns = Object.keys(values.addOns || {}).filter(
-      key => values.addOns?.[key],
-    );
-
-    // Create lead
-    const _lead = leadsStore.addLead({
+    // Prepare data for API submission
+    const formData = {
       tripType: values.tripType,
       checkIn: values.checkIn,
       checkOut: values.checkOut,
-      guestCount: parseInt(values.guestCount),
-      foodPreferences: selectedFoodPreferences,
-      addOns: selectedAddOns,
+      guestCount: values.guestCount,
+      foodPreferences: values.foodPreferences || {},
+      addOns: values.addOns || {},
       contactInfo: {
         name: values.contactInfo.name,
         email: values.contactInfo.email,
         phone: values.contactInfo.phone,
         whatsappOptIn: Boolean(values.contactInfo.whatsappOptIn),
       },
-      wishlistItems: wishlistStore ? wishlistStore.items.map(item => item.id) : [],
+      wishlistItems: wishlistStore
+        ? wishlistStore.items.map(item => ({
+            id: item.id,
+            type: item.type,
+            title: item.title,
+            displayName: item.displayName,
+            location: item.location,
+          }))
+        : [],
+    };
+
+    // Submit to API endpoint
+    const response = await $fetch('/api/getQuote', {
+      method: 'POST',
+      body: formData,
     });
 
-    // Clear wishlist after successful submission
-    if (wishlistStore) {
-      wishlistStore.clearWishlist();
+    if (response.success) {
+      // Also store in local leads store for admin purposes
+      const _lead = leadsStore.addLead({
+        tripType: values.tripType,
+        checkIn: values.checkIn,
+        checkOut: values.checkOut,
+        guestCount: parseInt(values.guestCount),
+        foodPreferences: Object.keys(values.foodPreferences || {}).filter(
+          key => values.foodPreferences?.[key],
+        ),
+        addOns: Object.keys(values.addOns || {}).filter(
+          key => values.addOns?.[key],
+        ),
+        contactInfo: {
+          name: values.contactInfo.name,
+          email: values.contactInfo.email,
+          phone: values.contactInfo.phone,
+          whatsappOptIn: Boolean(values.contactInfo.whatsappOptIn),
+        },
+        wishlistItems: wishlistStore ? wishlistStore.items.map(item => item.id) : [],
+      });
+
+      // Clear wishlist after successful submission
+      if (wishlistStore) {
+        wishlistStore.clearWishlist();
+      }
+
+      // Show success message
+      alert('Thank you! Your quote request has been submitted successfully. We\'ll get back to you within 24 hours.');
+
+      // Navigate back to home
+      navigateTo('/');
     }
-
-    // Show success message
-    alert('Thank you! Your quote request has been submitted successfully. We\'ll get back to you within 24 hours.');
-
-    // Navigate back to home
-    navigateTo('/');
+    else {
+      throw new Error('Failed to submit quote request');
+    }
   }
   catch (error) {
     console.error('Error submitting form:', error);

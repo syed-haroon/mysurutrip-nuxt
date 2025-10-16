@@ -72,9 +72,6 @@
         </ui-button>
       </div>
     </section>
-
-    <!-- Wishlist Summary -->
-    <WishlistSummary v-if="wishlistStore.itemCount > 0" />
   </div>
 </template>
 
@@ -88,7 +85,6 @@ useHead({
 });
 
 // Stores
-const wishlistStore = useWishlistStore();
 const siteStore = useSiteStore();
 
 const scrollToHotels = () => {

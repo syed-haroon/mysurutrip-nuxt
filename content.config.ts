@@ -36,14 +36,22 @@ export default defineContentConfig({
       type: 'page',
       source: 'hotels/*.md',
       schema: z.object({
-        title: z.string(),
+        title: z.string(), // Real name - admin only
+        displayName: z.string().optional(), // Made-up name for customers
+        id: z.string().optional(), // Dynamic ID for URLs and file paths
         description: z.string(),
         type: z.string(),
         category: z.string(),
         location: z.string(),
         rating: z.number(),
         priceRange: z.string(),
-        images: z.array(z.string()),
+        images: z.array(z.object({
+          imgURL: z.string(),
+          thumbURL: z.string(),
+          isFeatured: z.boolean(),
+          type: z.string(),
+          alt: z.string(),
+        })),
         amenities: z.array(z.string()),
         features: z.array(z.string()),
         contact: z.object({

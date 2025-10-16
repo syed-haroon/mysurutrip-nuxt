@@ -5,6 +5,7 @@ export interface WishlistItem {
   id: string | undefined;
   type: 'hotel' | 'activity';
   title: string;
+  displayName?: string; // For hotels: fake name shown to customers
   image: string;
   location: string;
 }

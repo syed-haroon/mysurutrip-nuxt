@@ -6,14 +6,26 @@
       <div class="relative">
         <HeroSection
           :images="hotel.images || []"
-          :title="hotel.title"
+          :title="getDisplayName(hotel)"
           :location="hotel.location"
         />
         <div class="absolute top-0 right-0 p-4 z-10">
           <SocialShareDropdown
-            :title="hotel.title"
-            :description="hotel.description || `Experience luxury at ${hotel.title} in ${hotel.location}. Book your perfect stay in Mysuru.`"
-            :image="hotel.images?.[0]"
+            :title="getDisplayName(hotel)"
+            :description="hotel.description || `Experience luxury at ${getDisplayName(hotel)} in ${hotel.location}. Book your perfect stay in Mysuru.`"
+            :image="getFeaturedImage(hotel.images)"
+          />
+        </div>
+        <div
+          v-if="hotel"
+          class="absolute bottom-0 right-0 p-4 z-10"
+        >
+          <ImageGalleryDialog
+            :images="hotel.allImages || hotel.images || []"
+            :title="getDisplayName(hotel)"
+            :model-value="isImageGalleryOpen"
+            button-style="blue"
+            @update:model-value="isImageGalleryOpen = $event"
           />
         </div>
       </div>
@@ -55,7 +67,7 @@
                   v-else
                   class="text-gray-600"
                 >
-                  Experience luxury and comfort at {{ hotel.title }}. Located in the heart of {{ hotel.location }},
+                  Experience luxury and comfort at {{ getDisplayName(hotel) }}. Located in the heart of {{ hotel.location }},
                   this property offers exceptional amenities and warm hospitality for your perfect stay in Mysuru.
                 </p>
               </div>
@@ -184,8 +196,6 @@
 
 <script setup lang="ts">
 import type { HotelsCollectionItem } from '@nuxt/content';
-import HeroSection from '~/components/HeroSection.vue';
-import DetailSidebar from '~/components/DetailSidebar.vue';
 
 type Hotel = HotelsCollectionItem;
 
@@ -193,8 +203,36 @@ type Hotel = HotelsCollectionItem;
 const route = useRoute();
 const slug = route.params.slug as string;
 
+// Gallery dialog state
+const isImageGalleryOpen = ref(false);
+
 // Stores
 const wishlistStore = useWishlistStore();
+const siteStore = useSiteStore();
+
+// Helper function to get featured image or first image
+const getFeaturedImage = (images: unknown[] | undefined) => {
+  if (!images || images.length === 0) return null;
+
+  // If images is an array of objects with imgURL property
+  if (typeof images[0] === 'object' && images[0] && 'imgURL' in images[0]) {
+    const featuredImage = images.find(img => img && typeof img === 'object' && 'isFeatured' in img && img.isFeatured);
+    return featuredImage && typeof featuredImage === 'object' && 'imgURL' in featuredImage
+      ? featuredImage.imgURL as string
+      : (images[0] as { imgURL: string }).imgURL;
+  }
+
+  // If images is an array of strings (legacy format)
+  return images[0] as string;
+};
+
+// Helper function to get display name based on admin status
+const getDisplayName = (hotel: Hotel) => {
+  if (siteStore.isAdmin) {
+    return `${hotel.displayName || hotel.title} (${hotel.title})`;
+  }
+  return hotel.displayName || hotel.title;
+};
 
 // Fetch hotel data using Nuxt Content v3
 const { data: hotel, pending } = await useAsyncData<Hotel | null>(
@@ -210,16 +248,16 @@ const siteUrl = 'https://mysurutrip.com';
 const currentUrl = computed(() => `${siteUrl}/hotels/${slug}`);
 
 useHead({
-  title: computed(() => hotel.value ? `${hotel.value.title} - Mysuru Hotels` : 'Hotel Details'),
+  title: computed(() => hotel.value ? `${getDisplayName(hotel.value)} - Mysuru Hotels` : 'Hotel Details'),
   meta: [
     // Basic Meta Tags
     {
       name: 'description',
-      content: computed(() => hotel.value ? `Book your stay at ${hotel.value.title} in ${hotel.value.location}. Experience luxury and comfort in Mysuru. ${hotel.value.description || ''}`.slice(0, 160) : 'Hotel details'),
+      content: computed(() => hotel.value ? `Book your stay at ${getDisplayName(hotel.value)} in ${hotel.value.location}. Experience luxury and comfort in Mysuru. ${hotel.value.description || ''}`.slice(0, 160) : 'Hotel details'),
     },
     {
       name: 'keywords',
-      content: computed(() => hotel.value ? `${hotel.value.title}, ${hotel.value.location}, Mysuru hotels, ${hotel.value.category}, accommodation` : ''),
+      content: computed(() => hotel.value ? `${getDisplayName(hotel.value)}, ${hotel.value.location}, Mysuru hotels, ${hotel.value.category}, accommodation` : ''),
     },
 
     // Open Graph Tags
@@ -229,11 +267,11 @@ useHead({
     },
     {
       property: 'og:title',
-      content: computed(() => hotel.value ? `${hotel.value.title} - Luxury Stay in ${hotel.value.location}` : 'Hotel Details'),
+      content: computed(() => hotel.value ? `${getDisplayName(hotel.value)} - Luxury Stay in ${hotel.value.location}` : 'Hotel Details'),
     },
     {
       property: 'og:description',
-      content: computed(() => hotel.value ? `Experience luxury at ${hotel.value.title} in ${hotel.value.location}. ${hotel.value.description || 'Book your perfect stay in Mysuru.'}`.slice(0, 300) : 'Hotel details'),
+      content: computed(() => hotel.value ? `Experience luxury at ${getDisplayName(hotel.value)} in ${hotel.value.location}. ${hotel.value.description || 'Book your perfect stay in Mysuru.'}`.slice(0, 300) : 'Hotel details'),
     },
     {
       property: 'og:url',
@@ -241,11 +279,11 @@ useHead({
     },
     {
       property: 'og:image',
-      content: computed(() => hotel.value?.images?.[0] || '/images/placeholder.svg'),
+      content: computed(() => getFeaturedImage(hotel.value?.images) || '/images/placeholder.svg'),
     },
     {
       property: 'og:image:alt',
-      content: computed(() => hotel.value ? `${hotel.value.title} - Hotel in ${hotel.value.location}` : 'Hotel image'),
+      content: computed(() => hotel.value ? `${getDisplayName(hotel.value)} - Hotel in ${hotel.value.location}` : 'Hotel image'),
     },
     {
       property: 'og:site_name',
@@ -259,15 +297,15 @@ useHead({
     },
     {
       name: 'twitter:title',
-      content: computed(() => hotel.value ? `${hotel.value.title} - Mysuru Hotels` : 'Hotel Details'),
+      content: computed(() => hotel.value ? `${getDisplayName(hotel.value)} - Mysuru Hotels` : 'Hotel Details'),
     },
     {
       name: 'twitter:description',
-      content: computed(() => hotel.value ? `Book your stay at ${hotel.value.title} in ${hotel.value.location}. Experience luxury and comfort in Mysuru.`.slice(0, 200) : 'Hotel details'),
+      content: computed(() => hotel.value ? `Book your stay at ${getDisplayName(hotel.value)} in ${hotel.value.location}. Experience luxury and comfort in Mysuru.`.slice(0, 200) : 'Hotel details'),
     },
     {
       name: 'twitter:image',
-      content: computed(() => hotel.value?.images?.[0] || '/images/placeholder.svg'),
+      content: computed(() => getFeaturedImage(hotel.value?.images) || '/images/placeholder.svg'),
     },
 
     // Additional Meta Tags
@@ -302,7 +340,7 @@ const addToWishlist = () => {
     id: hotel.value.path,
     type: 'hotel',
     title: hotel.value.title,
-    image: hotel.value.images?.[0] || '/images/placeholder.svg',
+    image: getFeaturedImage(hotel.value.images) || '/images/placeholder.svg',
     location: hotel.value.location,
   });
 };

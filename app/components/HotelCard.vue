@@ -7,8 +7,8 @@
   >
     <div class="relative">
       <nuxt-img
-        :src="hotel.images?.[0] || '/images/placeholder.svg'"
-        :alt="hotel.title"
+        :src="getFeaturedImage(hotel.images) || '/images/placeholder.svg'"
+        :alt="hotel.displayName || hotel.title"
         class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         quality="80"
@@ -51,7 +51,7 @@
     <div class="p-6">
       <div class="flex items-start justify-between mb-3">
         <h3 class="text-xl font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">
-          {{ hotel.title }}
+          {{ getDisplayName(hotel) }}
         </h3>
       </div>
 
@@ -103,9 +103,8 @@
           View Details
         </ui-button>
         <ui-button
-          as="nuxt-link"
-          to="/get-quote"
           class="flex-1 bg-orange-500 hover:bg-orange-600 text-white"
+          @click="handleGetQuote"
         >
           <icon
             name="lucide:message-square"
@@ -120,6 +119,7 @@
 
 <script setup lang="ts">
 import type { HotelsCollectionItem } from '@nuxt/content';
+import { toast } from 'vue-sonner';
 
 type Hotel = HotelsCollectionItem;
 
@@ -131,6 +131,29 @@ interface Props {
 const props = defineProps<Props>();
 
 const wishlistStore = useWishlistStore();
+const siteStore = useSiteStore();
+
+// Helper function to get featured image or first image
+const getFeaturedImage = (images: unknown[] | undefined) => {
+  if (!images || images.length === 0) return null;
+
+  // If images is an array of objects with imgURL property
+  if (typeof images[0] === 'object' && images[0].imgURL) {
+    const featuredImage = images.find(img => img.isFeatured);
+    return featuredImage ? featuredImage.imgURL : images[0].imgURL;
+  }
+
+  // If images is an array of strings (legacy format)
+  return images[0];
+};
+
+// Helper function to get display name based on admin status
+const getDisplayName = (hotel: unknown) => {
+  if (siteStore.isAdmin) {
+    return `${hotel.displayName || hotel.title} (${hotel.title})`;
+  }
+  return hotel.displayName || hotel.title;
+};
 
 const isInWishlist = computed(() =>
   wishlistStore.isInWishlist(props.hotel.path || props.hotel.title),
@@ -146,17 +169,52 @@ const wishlistTooltip = computed(() => {
 
 const toggleWishlist = () => {
   if (isInWishlist.value) {
-    wishlistStore.removeItem(props.hotel.path || props.hotel.title);
+    wishlistStore.removeItem(props.hotel.path || props.hotel.displayName);
+    toast('Removed from wishlist', {
+      description: `${props.hotel.displayName} has been removed from your wishlist`,
+    });
   }
   else if (canAdd.value) {
     const item = {
-      id: props.hotel.path || props.hotel.title,
+      id: props.hotel.path || props.hotel.displayName,
       type: 'hotel' as const,
-      title: props.hotel.title,
-      image: props.hotel.images?.[0] || '/images/placeholder.svg',
+      title: props.hotel.title, // Real hotel name
+      displayName: props.hotel.displayName, // Fake name for customers
+      image: getFeaturedImage(props.hotel.images) || '/images/placeholder.svg',
       location: props.hotel.location,
     };
     wishlistStore.addItem(item);
+    toast('Added to wishlist', {
+      description: `${props.hotel.displayName} has been added to your wishlist`,
+      action: {
+        label: 'View Wishlist',
+        onClick: () => navigateTo('/get-quote'),
+      },
+    });
   }
+  else {
+    toast('Wishlist is full', {
+      description: 'You can only have 3 items in your wishlist. Remove an item to add more.',
+    });
+  }
+};
+
+const handleGetQuote = () => {
+  // Add to wishlist first, then navigate
+  if (!isInWishlist.value && canAdd.value) {
+    const item = {
+      id: props.hotel.path || props.hotel.title,
+      type: 'hotel' as const,
+      title: props.hotel.title, // Real hotel name
+      displayName: props.hotel.displayName, // Fake name for customers
+      image: getFeaturedImage(props.hotel.images) || '/images/placeholder.svg',
+      location: props.hotel.location,
+    };
+    wishlistStore.addItem(item);
+    toast('Added to wishlist', {
+      description: `${props.hotel.title} has been added to your wishlist`,
+    });
+  }
+  navigateTo('/get-quote');
 };
 </script>

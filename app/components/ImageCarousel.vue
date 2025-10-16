@@ -1,9 +1,10 @@
 <template>
   <Swiper
     :modules="modules"
-    :slides-per-view="'auto'"
+    slides-per-view="auto"
     :space-between="16"
     :centered-slides="false"
+    :loop="false"
     :grab-cursor="true"
     :pagination="{
       type: 'progressbar',
@@ -12,12 +13,16 @@
     :navigation="true"
     :breakpoints="{
       320: {
-        slidesPerView: 1,
-        spaceBetween: 0,
+        slidesPerView: 1.2,
+        spaceBetween: 2,
       },
       768: {
-        slidesPerView: 'auto',
-        spaceBetween: 16,
+        slidesPerView: 2.5,
+        spaceBetween: 2,
+      },
+      1024: {
+        slidesPerView: 3.5,
+        spaceBetween: 2,
       },
     }"
     class="w-full"
@@ -25,14 +30,14 @@
     <SwiperSlide
       v-for="(image, index) in images"
       :key="index"
-      class="!w-[calc(100vw/1.5)] md:!w-[calc(100vw/1.5)] max-w-none"
+      class="!w-80 md:!w-96"
     >
       <div class="relative h-80 md:h-96">
         <nuxt-img
           :src="image"
           :alt="`${title} - Image ${index + 1}`"
-          class="w-full h-full object-cover rounded-none"
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66.67vw, 50vw"
+          class="w-full h-full object-cover"
+          sizes="(max-width: 768px) 320px, 384px"
           quality="80"
         />
       </div>
@@ -68,21 +73,26 @@ const modules = [Pagination, Navigation];
 
 :deep(.swiper-button-next),
 :deep(.swiper-button-prev) {
-  color: #f97316;
-  background: rgba(255, 255, 255, 0.9);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 }
 
 :deep(.swiper-button-next:hover),
 :deep(.swiper-button-prev:hover) {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 :deep(.swiper-button-next::after),
 :deep(.swiper-button-prev::after) {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 </style>
