@@ -79,47 +79,36 @@
                 Amenities
               </h3>
               <div class="grid md:grid-cols-2 gap-4">
-                <div class="flex items-center gap-3">
+                <div
+                  v-for="amenity in hotel.amenities"
+                  :key="amenity"
+                  class="flex items-center gap-3"
+                >
                   <icon
-                    name="lucide:wifi"
+                    :name="getAmenityIcon(amenity)"
                     class="w-5 h-5 text-green-600"
                   />
-                  <span>Free WiFi</span>
+                  <span>{{ amenity }}</span>
                 </div>
-                <div class="flex items-center gap-3">
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="bg-white rounded-lg shadow-sm p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Features
+              </h3>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div
+                  v-for="feature in hotel.features"
+                  :key="feature"
+                  class="flex items-center gap-3"
+                >
                   <icon
-                    name="lucide:parking-circle"
-                    class="w-5 h-5 text-green-600"
+                    :name="getFeatureIcon(feature)"
+                    class="w-5 h-5 text-blue-600"
                   />
-                  <span>Free Parking</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <icon
-                    name="lucide:utensils"
-                    class="w-5 h-5 text-green-600"
-                  />
-                  <span>Restaurant</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <icon
-                    name="lucide:dumbbell"
-                    class="w-5 h-5 text-green-600"
-                  />
-                  <span>Fitness Center</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <icon
-                    name="lucide:droplets"
-                    class="w-5 h-5 text-green-600"
-                  />
-                  <span>Swimming Pool</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <icon
-                    name="lucide:car"
-                    class="w-5 h-5 text-green-600"
-                  />
-                  <span>Airport Shuttle</span>
+                  <span>{{ feature }}</span>
                 </div>
               </div>
             </div>
@@ -344,4 +333,8 @@ const addToWishlist = () => {
     location: hotel.value.location,
   });
 };
+
+// Use amenities and features composables
+const { getAmenityIcon } = useAmenities();
+const { getFeatureIcon } = useFeatures();
 </script>
