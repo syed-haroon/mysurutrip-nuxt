@@ -4,6 +4,7 @@ displayName: "Heritage Grand Palace" # Made-up name for customers
 id: "heritage-grand-palace" # Dynamic ID for URLs and file paths
 description: "Experience royal luxury in the heart of Mysuru with our heritage-inspired accommodation featuring traditional architecture and modern amenities."
 type: "hotel"
+isFeatured: true
 category: "luxury"
 location: "Palace Road, Mysuru"
 rating: 4.7

@@ -4,12 +4,13 @@ displayName: "Eco Paradise Resort" # Made-up name for customers
 id: "eco-paradise-resort" # Dynamic ID for URLs and file paths
 description: "Eco-friendly resort nestled in Chamundi Hills offering sustainable accommodation and natural beauty."
 type: "hotel"
+isFeatured: false
 category: "eco-friendly"
 location: "Chamundi Hills, Mysuru"
 rating: 4.5
 priceRange: "₹3,000 - ₹6,000"
 path: "eco-paradise-resort"
-featuredImages:
+images:
   - imgURL: "/images/hotels/eco-paradise-resort/green-valley-resort-1.svg"
     thumbURL: "/images/hotels/eco-paradise-resort/green-valley-resort-1.svg"
     alt: "Eco Paradise Resort exterior"
@@ -19,8 +20,6 @@ featuredImages:
   - imgURL: "/images/hotels/eco-paradise-resort/green-valley-resort-1.svg"
     thumbURL: "/images/hotels/eco-paradise-resort/green-valley-resort-1.svg"
     alt: "Eco-friendly cottage"
-
-allImages:
   - imgURL: "/images/hotels/eco-paradise-resort/green-valley-resort-1.svg"
     thumbURL: "/images/hotels/eco-paradise-resort/green-valley-resort-1.svg"
     type: "exterior"

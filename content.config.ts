@@ -41,6 +41,7 @@ export default defineContentConfig({
         id: z.string().optional(), // Dynamic ID for URLs and file paths
         description: z.string(),
         type: z.string(),
+        isFeatured: z.boolean(),
         category: z.string(),
         location: z.string(),
         rating: z.number(),

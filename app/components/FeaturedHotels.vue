@@ -46,7 +46,7 @@ const { data: featuredHotels } = await useAsyncData(
   () =>
     queryCollection('hotels')
       .where('type', '=', 'hotel')
-      .limit(2)
+      .where('isFeatured', '=', true)
       .all(),
 );
 </script>
