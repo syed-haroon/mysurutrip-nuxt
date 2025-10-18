@@ -14,7 +14,7 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         <HotelCard
           v-for="hotel in featuredHotels || []"
           :key="hotel.id"
