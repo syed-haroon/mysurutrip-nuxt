@@ -1,7 +1,7 @@
 ---
 title: "Poppins Villa" # Real name - admin only
-displayName: "Poppins Villa" # Made-up name for customers
-id: "poppins-villa" # Dynamic ID for URLs and file paths
+displayName: "MTH-PV" # Made-up name for customers
+id: "mth-pv" # Dynamic ID for URLs and file paths
 description: "Experience authentic home-stay hospitality in a beautiful villa with river views, modern amenities, and personalized service in the heart of Mysuru."
 type: "hotel"
 isFeatured: true
@@ -9,170 +9,170 @@ category: "luxury"
 location: "River View Road, Mysuru"
 rating: 4.6
 priceRange: "₹3,500 - ₹8,500"
-path: "poppins-villa"
+path: "mth-pv"
 images:
-  - imgURL: "/images/hotels/poppins-villa/exterior-front-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/exterior-front-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/exterior-front-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/exterior-front-01-thumb.jpg"
     isFeatured: true
     type: "exterior"
     alt: "Beautiful villa exterior with traditional architecture"
-  - imgURL: "/images/hotels/poppins-villa/river-view-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/river-view-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/river-view-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/river-view-01-thumb.jpg"
     isFeatured: true
     type: "view"
     alt: "Stunning river view from the villa"
-  - imgURL: "/images/hotels/poppins-villa/hall-a-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/hall-a-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/hall-a-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/hall-a-01-thumb.jpg"
     isFeatured: true
     type: "common"
     alt: "Spacious living hall with modern amenities"
-  - imgURL: "/images/hotels/poppins-villa/room-a-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-a-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-a-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-a-01-thumb.jpg"
     isFeatured: false
     type: "room-deluxe"
     alt: "Comfortable deluxe room with river view"
-  - imgURL: "/images/hotels/poppins-villa/amenity-kitchen-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/amenity-kitchen-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/amenity-kitchen-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/amenity-kitchen-01-thumb.jpg"
     isFeatured: true
     type: "amenity"
     alt: "Well-equipped modern kitchen"
-  - imgURL: "/images/hotels/poppins-villa/entrance-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/entrance-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/entrance-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/entrance-01-thumb.jpg"
     isFeatured: false
     type: "exterior"
     alt: "Welcoming entrance to the villa"
-  - imgURL: "/images/hotels/poppins-villa/exterior-front-02.jpg"
-    thumbURL: "/images/hotels/poppins-villa/exterior-front-02-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/exterior-front-02.jpg"
+    thumbURL: "/images/hotels/mth-pv/exterior-front-02-thumb.jpg"
     isFeatured: false
     type: "exterior"
     alt: "Villa facade with garden view"
-  - imgURL: "/images/hotels/poppins-villa/exterior-front-03.jpg"
-    thumbURL: "/images/hotels/poppins-villa/exterior-front-03-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/exterior-front-03.jpg"
+    thumbURL: "/images/hotels/mth-pv/exterior-front-03-thumb.jpg"
     isFeatured: false
     type: "exterior"
     alt: "Side view of the villa"
-  - imgURL: "/images/hotels/poppins-villa/river-view-02.jpg"
-    thumbURL: "/images/hotels/poppins-villa/river-view-02-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/river-view-02.jpg"
+    thumbURL: "/images/hotels/mth-pv/river-view-02-thumb.jpg"
     isFeatured: false
     type: "view"
     alt: "Panoramic river view"
-  - imgURL: "/images/hotels/poppins-villa/river-view-03.jpg"
-    thumbURL: "/images/hotels/poppins-villa/river-view-03-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/river-view-03.jpg"
+    thumbURL: "/images/hotels/mth-pv/river-view-03-thumb.jpg"
     isFeatured: false
     type: "view"
     alt: "Serene river landscape"
-  - imgURL: "/images/hotels/poppins-villa/river-view-04.jpg"
-    thumbURL: "/images/hotels/poppins-villa/river-view-04-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/river-view-04.jpg"
+    thumbURL: "/images/hotels/mth-pv/river-view-04-thumb.jpg"
     isFeatured: false
     type: "view"
     alt: "Beautiful river scenery"
-  - imgURL: "/images/hotels/poppins-villa/river-view-05.jpg"
-    thumbURL: "/images/hotels/poppins-villa/river-view-05-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/river-view-05.jpg"
+    thumbURL: "/images/hotels/mth-pv/river-view-05-thumb.jpg"
     isFeatured: false
     type: "view"
     alt: "Scenic river view"
-  - imgURL: "/images/hotels/poppins-villa/hall-a-02.jpg"
-    thumbURL: "/images/hotels/poppins-villa/hall-a-02-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/hall-a-02.jpg"
+    thumbURL: "/images/hotels/mth-pv/hall-a-02-thumb.jpg"
     isFeatured: false
     type: "common"
     alt: "Comfortable seating area"
-  - imgURL: "/images/hotels/poppins-villa/hall-b-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/hall-b-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/hall-b-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/hall-b-01-thumb.jpg"
     isFeatured: false
     type: "common"
     alt: "Additional living space"
-  - imgURL: "/images/hotels/poppins-villa/hall-b-02.jpg"
-    thumbURL: "/images/hotels/poppins-villa/hall-b-02-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/hall-b-02.jpg"
+    thumbURL: "/images/hotels/mth-pv/hall-b-02-thumb.jpg"
     isFeatured: false
     type: "common"
     alt: "Relaxation area"
-  - imgURL: "/images/hotels/poppins-villa/room-a-02.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-a-02-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-a-02.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-a-02-thumb.jpg"
     isFeatured: false
     type: "room-deluxe"
     alt: "Deluxe room interior"
-  - imgURL: "/images/hotels/poppins-villa/room-b-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-b-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-b-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-b-01-thumb.jpg"
     isFeatured: false
     type: "room-standard"
     alt: "Standard room with comfort"
-  - imgURL: "/images/hotels/poppins-villa/room-b-02.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-b-02-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-b-02.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-b-02-thumb.jpg"
     isFeatured: false
     type: "room-standard"
     alt: "Cozy standard room"
-  - imgURL: "/images/hotels/poppins-villa/room-c-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-c-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-c-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-c-01-thumb.jpg"
     isFeatured: false
     type: "room-standard"
     alt: "Well-appointed room"
-  - imgURL: "/images/hotels/poppins-villa/room-c-02.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-c-02-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-c-02.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-c-02-thumb.jpg"
     isFeatured: false
     type: "room-standard"
     alt: "Comfortable accommodation"
-  - imgURL: "/images/hotels/poppins-villa/room-d-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-d-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-d-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-d-01-thumb.jpg"
     isFeatured: true
     type: "room-suite"
     alt: "Spacious suite room"
-  - imgURL: "/images/hotels/poppins-villa/room-d-02.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-d-02-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-d-02.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-d-02-thumb.jpg"
     isFeatured: false
     type: "room-suite"
     alt: "Luxury suite interior"
-  - imgURL: "/images/hotels/poppins-villa/room-d-03.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-d-03-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-d-03.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-d-03-thumb.jpg"
     isFeatured: false
     type: "room-suite"
     alt: "Premium suite features"
-  - imgURL: "/images/hotels/poppins-villa/room-d-04.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-d-04-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-d-04.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-d-04-thumb.jpg"
     isFeatured: false
     type: "room-suite"
     alt: "Executive suite"
-  - imgURL: "/images/hotels/poppins-villa/room-e-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-e-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-e-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-e-01-thumb.jpg"
     isFeatured: true
     type: "room-premium"
     alt: "Premium room with amenities"
-  - imgURL: "/images/hotels/poppins-villa/room-e-02.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-e-02-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-e-02.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-e-02-thumb.jpg"
     isFeatured: false
     type: "room-premium"
     alt: "Elegant premium room"
-  - imgURL: "/images/hotels/poppins-villa/room-e-03.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-e-03-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-e-03.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-e-03-thumb.jpg"
     isFeatured: false
     type: "room-premium"
     alt: "Comfortable premium accommodation"
-  - imgURL: "/images/hotels/poppins-villa/room-f-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-f-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-f-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-f-01-thumb.jpg"
     isFeatured: false
     type: "room-family"
     alt: "Family room with extra space"
-  - imgURL: "/images/hotels/poppins-villa/room-f-02.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-f-02-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-f-02.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-f-02-thumb.jpg"
     isFeatured: false
     type: "room-family"
     alt: "Spacious family accommodation"
-  - imgURL: "/images/hotels/poppins-villa/room-f-03.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-f-03-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-f-03.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-f-03-thumb.jpg"
     isFeatured: false
     type: "room-family"
     alt: "Family-friendly room"
-  - imgURL: "/images/hotels/poppins-villa/room-g-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-g-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-g-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-g-01-thumb.jpg"
     isFeatured: false
     type: "room-budget"
     alt: "Budget-friendly room"
-  - imgURL: "/images/hotels/poppins-villa/room-g-02.jpg"
-    thumbURL: "/images/hotels/poppins-villa/room-g-02-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/room-g-02.jpg"
+    thumbURL: "/images/hotels/mth-pv/room-g-02-thumb.jpg"
     isFeatured: false
     type: "room-budget"
     alt: "Economical accommodation"
-  - imgURL: "/images/hotels/poppins-villa/bathroom-a-01.jpg"
-    thumbURL: "/images/hotels/poppins-villa/bathroom-a-01-thumb.jpg"
+  - imgURL: "/images/hotels/mth-pv/bathroom-a-01.jpg"
+    thumbURL: "/images/hotels/mth-pv/bathroom-a-01-thumb.jpg"
     isFeatured: false
     type: "bathroom"
     alt: "Modern bathroom facilities"
@@ -193,21 +193,21 @@ features:
   - "Cultural Immersion"
   - "Family-friendly"
 contact:
-  phone: "+91-821-1234568"
-  email: "info@poppinsvilla.com"
-  whatsapp: "+91-821-1234568"
+  phone: ""
+  email: ""
+  whatsapp: ""
 coordinates:
   lat: 12.3052
   lng: 76.6552
 ---
 
-# Poppins Villa
+# MTH-PV
 
 Experience authentic home-stay hospitality in our beautiful villa with stunning river views, modern amenities, and personalized service in the heart of Mysuru. Our villa offers a unique blend of comfort, culture, and natural beauty.
 
 ## About the Villa
 
-Poppins Villa is a charming home-stay property that provides guests with an authentic local experience while maintaining modern comforts. Located on River View Road, our villa offers breathtaking views of the surrounding landscape and provides a peaceful retreat from the bustling city life.
+This is a charming home-stay property that provides guests with an authentic local experience while maintaining modern comforts. Located on River View Road, our villa offers breathtaking views of the surrounding landscape and provides a peaceful retreat from the bustling city life.
 
 ## Room Types
 
@@ -251,4 +251,4 @@ Enjoy authentic home-cooked South Indian meals prepared with fresh, local ingred
 
 ## Location
 
-Conveniently located on River View Road, Poppins Villa offers easy access to Mysuru's major attractions while providing a peaceful, natural setting. The villa's riverside location makes it perfect for those seeking tranquility and natural beauty.
+Conveniently located on River View Road, we offers easy access to Mysuru's major attractions while providing a peaceful, natural setting. The villa's riverside location makes it perfect for those seeking tranquility and natural beauty.
