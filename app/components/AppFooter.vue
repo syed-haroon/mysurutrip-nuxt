@@ -165,7 +165,6 @@ const quickLinks = computed(() => {
     { to: '/', label: 'Home' },
     { to: '/hotels', label: 'Hotels & Accommodation' },
     { to: '/explore', label: 'Explore Attractions' },
-    { to: '/get-quote', label: 'Get Quote' },
   ];
 
   // Add activities link only if enabled

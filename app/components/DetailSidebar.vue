@@ -154,6 +154,7 @@ const emit = defineEmits<{
 
 // Stores
 const wishlistStore = useWishlistStore();
+const siteStore = useSiteStore();
 
 // Computed properties for dynamic content
 const timeLabels = computed(() => {
@@ -209,18 +210,14 @@ const addToWishlist = () => {
   toast('Added to wishlist', {
     description: `${props.item.displayName} has been added to your wishlist`,
     action: {
-      label: 'View Wishlist',
-      onClick: () => navigateTo('/get-quote'),
+      label: 'Get Quote',
+      onClick: () => { siteStore.openQuoteSheet(); },
     },
   });
 };
 
 const handleGetQuote = () => {
-  // Add to wishlist first, then navigate
   emit('addToWishlist');
-  toast('Added to wishlist', {
-    description: `${props.item.displayName} has been added to your wishlist`,
-  });
-  navigateTo('/get-quote');
+  siteStore.openQuoteSheet();
 };
 </script>

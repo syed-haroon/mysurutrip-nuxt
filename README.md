@@ -31,6 +31,7 @@ app/
 │   ├── HotelCard.vue   # Hotel display component
 │   ├── ActivityCard.vue # Activity display component
 │   ├── MainNavigation.vue  # Main navigation
+│   ├── QuoteSheet.vue      # Quote request modal
 │   ├── WishlistSummary.vue # Floating wishlist
 │   ├── FeaturedHotels.vue  # Featured hotels section
 │   └── FeaturedActivities.vue # Featured activities section
@@ -40,8 +41,7 @@ app/
 ├── pages/              # Page components
 │   ├── index.vue       # Home page
 │   ├── hotels/         # Hotel listings
-│   ├── activities/     # Activity listings
-│   └── get-quote.vue   # Lead capture form
+│   └── activities/     # Activity listings
 ├── stores/             # Pinia stores
 │   ├── wishlist.ts     # Wishlist state management
 │   └── leads.ts        # Lead management

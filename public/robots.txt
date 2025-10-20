@@ -12,7 +12,6 @@ Sitemap: https://mysurutrip.com/sitemap
 Allow: /hotels/
 Allow: /activities/
 Allow: /explore/
-Allow: /get-quote
 
 # Allow policy pages
 Allow: /privacy-policy

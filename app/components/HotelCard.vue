@@ -167,6 +167,18 @@ const wishlistTooltip = computed(() => {
   return 'Add to wishlist';
 });
 
+const handleAddItemToWishlist = () => {
+  const item = {
+    id: props.hotel.path || props.hotel.title,
+    type: 'hotel' as const,
+    title: props.hotel.title, // Real hotel name
+    displayName: props.hotel.displayName, // Fake name for customers
+    image: getFeaturedImage(props.hotel.images) || '/images/placeholder.svg',
+    location: props.hotel.location,
+  };
+  wishlistStore.addItem(item);
+};
+
 const toggleWishlist = () => {
   if (isInWishlist.value) {
     wishlistStore.removeItem(props.hotel.path || props.hotel.displayName);
@@ -175,20 +187,12 @@ const toggleWishlist = () => {
     });
   }
   else if (canAdd.value) {
-    const item = {
-      id: props.hotel.path || props.hotel.displayName,
-      type: 'hotel' as const,
-      title: props.hotel.title, // Real hotel name
-      displayName: props.hotel.displayName, // Fake name for customers
-      image: getFeaturedImage(props.hotel.images) || '/images/placeholder.svg',
-      location: props.hotel.location,
-    };
-    wishlistStore.addItem(item);
+    handleAddItemToWishlist();
     toast('Added to wishlist', {
       description: `${props.hotel.displayName} has been added to your wishlist`,
       action: {
-        label: 'View Wishlist',
-        onClick: () => navigateTo('/get-quote'),
+        label: 'Get Quote',
+        onClick: () => { siteStore.openQuoteSheet(); },
       },
     });
   }
@@ -202,19 +206,11 @@ const toggleWishlist = () => {
 const handleGetQuote = () => {
   // Add to wishlist first, then navigate
   if (!isInWishlist.value && canAdd.value) {
-    const item = {
-      id: props.hotel.path || props.hotel.title,
-      type: 'hotel' as const,
-      title: props.hotel.title, // Real hotel name
-      displayName: props.hotel.displayName, // Fake name for customers
-      image: getFeaturedImage(props.hotel.images) || '/images/placeholder.svg',
-      location: props.hotel.location,
-    };
-    wishlistStore.addItem(item);
+    handleAddItemToWishlist();
     toast('Added to wishlist', {
       description: `${props.hotel.title} has been added to your wishlist`,
     });
   }
-  navigateTo('/get-quote');
+  siteStore.openQuoteSheet();
 };
 </script>

@@ -11,7 +11,7 @@
             <div class="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
               <span class="text-white font-bold text-lg">M</span>
             </div>
-            <span class="text-xl font-bold text-gray-900">MysuruTrip</span>
+            <span class="hidden sm:block text-xl font-bold text-gray-900">MysuruTrip</span>
           </NuxtLink>
         </div>
 
@@ -53,7 +53,7 @@
           <!-- Phone Number -->
           <a
             href="tel:+91-9845448902"
-            class="hidden lg:flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100 hover:from-blue-100 hover:to-indigo-100 transition-all"
+            class="flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100 hover:from-blue-100 hover:to-indigo-100 transition-all"
             title="Call Now"
           >
             <div class="flex bg-blue-500 rounded-full p-1 size-8">
@@ -69,20 +69,22 @@
           </a>
 
           <!-- Wishlist Indicator -->
-          <NuxtLink
+          <ui-button
             v-if="itemCount > 0"
-            to="/get-quote"
-            class="relative p-2 text-gray-700 hover:text-orange-600 transition-colors"
-            title="View Wishlist"
+            variant="ghost"
+            size="icon"
+            class="relative text-gray-700 hover:text-orange-600 transition-colors"
+            title="Get Quote"
+            @click="siteStore.openQuoteSheet"
           >
             <icon-heart
               variant="outline"
-              size="lg"
+              class="size-6 w-6 h-6"
             />
             <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
               {{ itemCount }}
             </span>
-          </NuxtLink>
+          </ui-button>
           <div
             v-else
             class="relative p-2 text-gray-400 cursor-not-allowed"
@@ -93,16 +95,6 @@
               size="lg"
             />
           </div>
-
-          <!-- CTA Button -->
-          <ui-button
-            as="nuxt-link"
-            to="/get-quote"
-            size="sm"
-            class="bg-orange-500 hover:bg-orange-600 text-white"
-          >
-            Get Quote
-          </ui-button>
 
           <!-- Mobile Menu Button -->
           <button
@@ -162,14 +154,6 @@
               @click="isMobileMenuOpen = false"
             >
               Explore
-            </NuxtLink>
-            <NuxtLink
-              to="/get-quote"
-              class="block text-gray-700 hover:text-orange-600 transition-colors font-medium"
-              active-class="text-orange-600"
-              @click="isMobileMenuOpen = false"
-            >
-              Get Quote
             </NuxtLink>
           </div>
         </div>

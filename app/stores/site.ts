@@ -11,6 +11,9 @@ export const useSiteStore = defineStore('site', () => {
   const isAdmin = ref(false);
   const adminPassword = 'iAmAdmin!'; // Static admin password
 
+  // QuoteSheet state
+  const isQuoteSheetOpen = ref(false);
+
   const toggleComingSoon = () => {
     showComingSoon.value = !showComingSoon.value;
   };
@@ -40,6 +43,19 @@ export const useSiteStore = defineStore('site', () => {
     isAdmin.value = false;
   };
 
+  // QuoteSheet methods
+  const openQuoteSheet = () => {
+    isQuoteSheetOpen.value = true;
+  };
+
+  const closeQuoteSheet = () => {
+    isQuoteSheetOpen.value = false;
+  };
+
+  const toggleQuoteSheet = () => {
+    isQuoteSheetOpen.value = !isQuoteSheetOpen.value;
+  };
+
   const checkAdminFromUrl = () => {
     // Check if admin password is in URL params
     if (import.meta.client) {
@@ -66,5 +82,9 @@ export const useSiteStore = defineStore('site', () => {
     authenticateAdmin,
     logoutAdmin,
     checkAdminFromUrl,
+    isQuoteSheetOpen,
+    openQuoteSheet,
+    closeQuoteSheet,
+    toggleQuoteSheet,
   };
 });

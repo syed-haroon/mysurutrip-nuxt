@@ -114,9 +114,8 @@
           View Details
         </ui-button>
         <ui-button
-          as="nuxt-link"
-          to="/get-quote"
           class="flex-1 bg-orange-500 hover:bg-orange-600 text-white"
+          @click="siteStore.openQuoteSheet"
         >
           <icon
             name="lucide:message-square"
@@ -142,6 +141,7 @@ interface Props {
 const props = defineProps<Props>();
 
 const wishlistStore = useWishlistStore();
+const siteStore = useSiteStore();
 
 const isInWishlist = computed(() =>
   wishlistStore.isInWishlist(props.activity.path || props.activity.title),

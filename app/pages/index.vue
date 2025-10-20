@@ -59,10 +59,9 @@
           Get personalized quotes and exclusive offers for your Mysuru adventure
         </p>
         <ui-button
-          as="nuxt-link"
-          to="/get-quote"
           size="lg"
           class="bg-white text-orange-600 hover:bg-gray-100"
+          @click="siteStore.openQuoteSheet"
         >
           <icon
             name="lucide:message-square"

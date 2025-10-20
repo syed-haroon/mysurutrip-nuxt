@@ -35,18 +35,6 @@
                 Home
               </nuxt-link>
             </li>
-            <li>
-              <nuxt-link
-                to="/get-quote"
-                class="text-gray-700 hover:text-orange-500 transition-colors flex items-center"
-              >
-                <icon
-                  name="lucide:chevron-right"
-                  class="w-4 h-4 mr-2"
-                />
-                Get Quote
-              </nuxt-link>
-            </li>
           </ul>
         </div>
 
