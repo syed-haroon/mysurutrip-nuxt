@@ -312,15 +312,28 @@
                     type="checkbox"
                     :name="`foodPreferences.${pref.value}`"
                   >
-                    <ui-form-item class="flex flex-row items-start gap-x-2 space-y-0 bg-gray-50 hover:bg-gray-100 p-2 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors cursor-pointer group">
-                      <ui-form-control>
+                    <ui-form-item
+                      :class="[
+                        'relative flex flex-row items-start space-y-0 p-3 rounded-lg border transition-all cursor-pointer group',
+                        value
+                          ? 'bg-orange-50 border-orange-300 hover:bg-orange-100 hover:border-orange-400'
+                          : 'bg-gray-50 border-gray-200 hover:bg-gray-100 hover:border-gray-300',
+                      ]"
+                      @click="handleChange(!value)"
+                    >
+                      <ui-form-control class="invisible absolute w-0 h-0">
                         <ui-checkbox
                           :model-value="value"
                           @update:model-value="handleChange"
                         />
                       </ui-form-control>
                       <div class="space-y-1 leading-none">
-                        <ui-form-label class="text-xs font-medium cursor-pointer group-hover:text-gray-700 transition-colors">
+                        <ui-form-label
+                          :class="[
+                            'text-xs font-medium cursor-pointer transition-colors',
+                            value ? 'text-gray-900' : 'text-gray-700 group-hover:text-gray-900',
+                          ]"
+                        >
                           {{ pref.emoji }} {{ pref.label }}
                         </ui-form-label>
                         <ui-form-message />
@@ -343,15 +356,28 @@
                     type="checkbox"
                     :name="`addOns.${addon.value}`"
                   >
-                    <ui-form-item class="flex flex-row items-start gap-x-2 space-y-0 bg-gray-50 hover:bg-gray-100 p-2 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors cursor-pointer group">
-                      <ui-form-control>
+                    <ui-form-item
+                      :class="[
+                        'relative flex flex-row items-start space-y-0 p-3 rounded-lg border transition-all cursor-pointer group',
+                        value
+                          ? 'bg-orange-50 border-orange-300 hover:bg-orange-100 hover:border-orange-400'
+                          : 'bg-gray-50 border-gray-200 hover:bg-gray-100 hover:border-gray-300',
+                      ]"
+                      @click="handleChange(!value)"
+                    >
+                      <ui-form-control class="invisible absolute w-0 h-0">
                         <ui-checkbox
                           :model-value="value"
                           @update:model-value="handleChange"
                         />
                       </ui-form-control>
                       <div class="space-y-1 leading-none">
-                        <ui-form-label class="text-xs font-medium cursor-pointer group-hover:text-gray-700 transition-colors">
+                        <ui-form-label
+                          :class="[
+                            'text-xs font-medium cursor-pointer transition-colors',
+                            value ? 'text-gray-900' : 'text-gray-700 group-hover:text-gray-900',
+                          ]"
+                        >
                           {{ addon.emoji }} {{ addon.label }}
                         </ui-form-label>
                         <p class="text-xs text-gray-600">
