@@ -626,12 +626,12 @@ const onSubmit = handleSubmit(async (values) => {
         checkIn: values.checkIn,
         checkOut: values.checkOut,
         guestCount: parseInt(values.guestCount),
-        foodPreferences: Object.keys(values.foodPreferences || {}).filter(
-          key => values.foodPreferences?.[key],
-        ),
-        addOns: Object.keys(values.addOns || {}).filter(
-          key => values.addOns?.[key],
-        ),
+        foodPreferences: Object.entries(values.foodPreferences || {})
+          .filter(([_, value]) => value)
+          .map(([key]) => key),
+        addOns: Object.entries(values.addOns || {})
+          .filter(([_, value]) => value)
+          .map(([key]) => key),
         contactInfo: {
           name: values.contactInfo.name,
           email: values.contactInfo.email,
